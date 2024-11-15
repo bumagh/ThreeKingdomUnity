@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [HideInInspector]
     private TextMeshPro nameTmp;
@@ -22,6 +22,10 @@ public class Player : MonoBehaviour
     }
     public void Init(string name, int hp, int atk, int speed)
     {
+        nameTmp = transform.Find("NameTextTmp").GetComponent<TextMeshPro>();
+        hpTmp = transform.Find("HpTextTmp").GetComponent<TextMeshPro>();
+        atkTmp = transform.Find("AtkTextTmp").GetComponent<TextMeshPro>();
+        speedTmp = transform.Find("SpeedTextTmp").GetComponent<TextMeshPro>();
         nameTmp.text = name;
         hpTmp.text = hp.ToString();
         atkTmp.text = atk.ToString();

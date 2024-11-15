@@ -1,0 +1,165 @@
+{
+    "Sheet1": [
+        {
+          "PoolId": "掉落池编号",
+          "Goodsid": "道具ID",
+          "weight": "掉落权重",
+          "MinNum": "掉落数下限",
+          "MaxNum": "掉落数上限"
+        },
+        {
+          "PoolId": 1000,
+          "Goodsid": 3005,
+          "weight": 100,
+          "MinNum": 3,
+          "MaxNum": 1
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3001,
+          "weight": 100,
+          "MinNum": 4,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3002,
+          "weight": 100,
+          "MinNum": 4,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3003,
+          "weight": 100,
+          "MinNum": 4,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3004,
+          "weight": 50,
+          "MinNum": 2,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3005,
+          "weight": 50,
+          "MinNum": 2,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3012,
+          "weight": 50,
+          "MinNum": 3,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3015,
+          "weight": 50,
+          "MinNum": 3,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3013,
+          "weight": 50,
+          "MinNum": 3,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3008,
+          "weight": 30,
+          "MinNum": 3,
+          "MaxNum": 2
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3007,
+          "weight": 30,
+          "MinNum": 2,
+          "MaxNum": 2
+        },
+        {
+          "PoolId": 1001,
+          "Goodsid": 3009,
+          "weight": 10,
+          "MinNum": 1,
+          "MaxNum": 2
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3017,
+          "weight": 100,
+          "MinNum": 3,
+          "MaxNum": 5
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3012,
+          "weight": 100,
+          "MinNum": 3,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3014,
+          "weight": 100,
+          "MinNum": 3,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3007,
+          "weight": 100,
+          "MinNum": 3,
+          "MaxNum": 5
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3005,
+          "weight": 50,
+          "MinNum": 3,
+          "MaxNum": 5
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3011,
+          "weight": 30,
+          "MinNum": 2,
+          "MaxNum": 5
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3016,
+          "weight": 30,
+          "MinNum": 2,
+          "MaxNum": 5
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3006,
+          "weight": 10,
+          "MinNum": 1,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3010,
+          "weight": 10,
+          "MinNum": 1,
+          "MaxNum": 3
+        },
+        {
+          "PoolId": 1002,
+          "Goodsid": 3009,
+          "weight": 10,
+          "MinNum": 2,
+          "MaxNum": 5
+        }
+      ]
+}

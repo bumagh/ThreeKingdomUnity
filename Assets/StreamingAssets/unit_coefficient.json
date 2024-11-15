@@ -1,0 +1,490 @@
+{
+    "Sheet1": [
+        {
+            "No": 1,
+            "AttackUnitType": 1,
+            "AffectUnitType": 1,
+            "CounterCoe": 1
+        },
+        {
+            "No": 2,
+            "AttackUnitType": 1,
+            "AffectUnitType": 2,
+            "CounterCoe": 2
+        },
+        {
+            "No": 3,
+            "AttackUnitType": 1,
+            "AffectUnitType": 3,
+            "CounterCoe": 0.65
+        },
+        {
+            "No": 4,
+            "AttackUnitType": 1,
+            "AffectUnitType": 4,
+            "CounterCoe": 1
+        },
+        {
+            "No": 5,
+            "AttackUnitType": 1,
+            "AffectUnitType": 5,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 6,
+            "AttackUnitType": 1,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 7,
+            "AttackUnitType": 1,
+            "AffectUnitType": 7,
+            "CounterCoe": 0.75
+        },
+        {
+            "No": 8,
+            "AttackUnitType": 1,
+            "AffectUnitType": 8,
+            "CounterCoe": 2
+        },
+        {
+            "No": 9,
+            "AttackUnitType": 1,
+            "AffectUnitType": 9,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 10,
+            "AttackUnitType": 2,
+            "AffectUnitType": 1,
+            "CounterCoe": 0.65
+        },
+        {
+            "No": 11,
+            "AttackUnitType": 2,
+            "AffectUnitType": 2,
+            "CounterCoe": 1
+        },
+        {
+            "No": 12,
+            "AttackUnitType": 2,
+            "AffectUnitType": 3,
+            "CounterCoe": 2.5
+        },
+        {
+            "No": 13,
+            "AttackUnitType": 2,
+            "AffectUnitType": 4,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 14,
+            "AttackUnitType": 2,
+            "AffectUnitType": 5,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 15,
+            "AttackUnitType": 2,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 16,
+            "AttackUnitType": 2,
+            "AffectUnitType": 7,
+            "CounterCoe": 0.75
+        },
+        {
+            "No": 17,
+            "AttackUnitType": 2,
+            "AffectUnitType": 8,
+            "CounterCoe": 2
+        },
+        {
+            "No": 18,
+            "AttackUnitType": 2,
+            "AffectUnitType": 9,
+            "CounterCoe": 2
+        },
+        {
+            "No": 19,
+            "AttackUnitType": 3,
+            "AffectUnitType": 1,
+            "CounterCoe": 1
+        },
+        {
+            "No": 20,
+            "AttackUnitType": 3,
+            "AffectUnitType": 2,
+            "CounterCoe": 0.65
+        },
+        {
+            "No": 21,
+            "AttackUnitType": 3,
+            "AffectUnitType": 3,
+            "CounterCoe": 1
+        },
+        {
+            "No": 22,
+            "AttackUnitType": 3,
+            "AffectUnitType": 4,
+            "CounterCoe": 1
+        },
+        {
+            "No": 23,
+            "AttackUnitType": 3,
+            "AffectUnitType": 5,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 24,
+            "AttackUnitType": 3,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 25,
+            "AttackUnitType": 3,
+            "AffectUnitType": 7,
+            "CounterCoe": 0.75
+        },
+        {
+            "No": 26,
+            "AttackUnitType": 3,
+            "AffectUnitType": 8,
+            "CounterCoe": 2
+        },
+        {
+            "No": 27,
+            "AttackUnitType": 3,
+            "AffectUnitType": 9,
+            "CounterCoe": 2
+        },
+        {
+            "No": 28,
+            "AttackUnitType": 4,
+            "AffectUnitType": 1,
+            "CounterCoe": 0.8
+        },
+        {
+            "No": 29,
+            "AttackUnitType": 4,
+            "AffectUnitType": 2,
+            "CounterCoe": 2.5
+        },
+        {
+            "No": 30,
+            "AttackUnitType": 4,
+            "AffectUnitType": 3,
+            "CounterCoe": 0.8
+        },
+        {
+            "No": 31,
+            "AttackUnitType": 4,
+            "AffectUnitType": 4,
+            "CounterCoe": 1
+        },
+        {
+            "No": 32,
+            "AttackUnitType": 4,
+            "AffectUnitType": 5,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 33,
+            "AttackUnitType": 4,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 34,
+            "AttackUnitType": 4,
+            "AffectUnitType": 7,
+            "CounterCoe": 0.8
+        },
+        {
+            "No": 35,
+            "AttackUnitType": 4,
+            "AffectUnitType": 8,
+            "CounterCoe": 1
+        },
+        {
+            "No": 36,
+            "AttackUnitType": 4,
+            "AffectUnitType": 9,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 37,
+            "AttackUnitType": 5,
+            "AffectUnitType": 1,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 38,
+            "AttackUnitType": 5,
+            "AffectUnitType": 2,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 39,
+            "AttackUnitType": 5,
+            "AffectUnitType": 3,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 40,
+            "AttackUnitType": 5,
+            "AffectUnitType": 4,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 41,
+            "AttackUnitType": 5,
+            "AffectUnitType": 5,
+            "CounterCoe": 1
+        },
+        {
+            "No": 42,
+            "AttackUnitType": 5,
+            "AffectUnitType": 6,
+            "CounterCoe": 1.25
+        },
+        {
+            "No": 43,
+            "AttackUnitType": 5,
+            "AffectUnitType": 7,
+            "CounterCoe": 1.25
+        },
+        {
+            "No": 44,
+            "AttackUnitType": 5,
+            "AffectUnitType": 8,
+            "CounterCoe": 3
+        },
+        {
+            "No": 45,
+            "AttackUnitType": 5,
+            "AffectUnitType": 9,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 46,
+            "AttackUnitType": 6,
+            "AffectUnitType": 1,
+            "CounterCoe": 1
+        },
+        {
+            "No": 47,
+            "AttackUnitType": 6,
+            "AffectUnitType": 2,
+            "CounterCoe": 1
+        },
+        {
+            "No": 48,
+            "AttackUnitType": 6,
+            "AffectUnitType": 3,
+            "CounterCoe": 1
+        },
+        {
+            "No": 49,
+            "AttackUnitType": 6,
+            "AffectUnitType": 4,
+            "CounterCoe": 1
+        },
+        {
+            "No": 50,
+            "AttackUnitType": 6,
+            "AffectUnitType": 5,
+            "CounterCoe": 1
+        },
+        {
+            "No": 51,
+            "AttackUnitType": 6,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 52,
+            "AttackUnitType": 6,
+            "AffectUnitType": 7,
+            "CounterCoe": 1
+        },
+        {
+            "No": 53,
+            "AttackUnitType": 6,
+            "AffectUnitType": 8,
+            "CounterCoe": 1
+        },
+        {
+            "No": 54,
+            "AttackUnitType": 6,
+            "AffectUnitType": 9,
+            "CounterCoe": 1
+        },
+        {
+            "No": 55,
+            "AttackUnitType": 7,
+            "AffectUnitType": 1,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 56,
+            "AttackUnitType": 7,
+            "AffectUnitType": 2,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 57,
+            "AttackUnitType": 7,
+            "AffectUnitType": 3,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 58,
+            "AttackUnitType": 7,
+            "AffectUnitType": 4,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 59,
+            "AttackUnitType": 7,
+            "AffectUnitType": 5,
+            "CounterCoe": 2
+        },
+        {
+            "No": 60,
+            "AttackUnitType": 7,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 61,
+            "AttackUnitType": 7,
+            "AffectUnitType": 7,
+            "CounterCoe": 0.5
+        },
+        {
+            "No": 62,
+            "AttackUnitType": 7,
+            "AffectUnitType": 8,
+            "CounterCoe": 0.8
+        },
+        {
+            "No": 63,
+            "AttackUnitType": 7,
+            "AffectUnitType": 9,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 64,
+            "AttackUnitType": 8,
+            "AffectUnitType": 1,
+            "CounterCoe": 1
+        },
+        {
+            "No": 65,
+            "AttackUnitType": 8,
+            "AffectUnitType": 2,
+            "CounterCoe": 1
+        },
+        {
+            "No": 66,
+            "AttackUnitType": 8,
+            "AffectUnitType": 3,
+            "CounterCoe": 1
+        },
+        {
+            "No": 67,
+            "AttackUnitType": 8,
+            "AffectUnitType": 4,
+            "CounterCoe": 1
+        },
+        {
+            "No": 68,
+            "AttackUnitType": 8,
+            "AffectUnitType": 5,
+            "CounterCoe": 1
+        },
+        {
+            "No": 69,
+            "AttackUnitType": 8,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 70,
+            "AttackUnitType": 8,
+            "AffectUnitType": 7,
+            "CounterCoe": 1
+        },
+        {
+            "No": 71,
+            "AttackUnitType": 8,
+            "AffectUnitType": 8,
+            "CounterCoe": 1
+        },
+        {
+            "No": 72,
+            "AttackUnitType": 8,
+            "AffectUnitType": 9,
+            "CounterCoe": 1
+        },
+        {
+            "No": 73,
+            "AttackUnitType": 9,
+            "AffectUnitType": 1,
+            "CounterCoe": 1.5
+        },
+        {
+            "No": 74,
+            "AttackUnitType": 9,
+            "AffectUnitType": 2,
+            "CounterCoe": 0.65
+        },
+        {
+            "No": 75,
+            "AttackUnitType": 9,
+            "AffectUnitType": 3,
+            "CounterCoe": 0.65
+        },
+        {
+            "No": 76,
+            "AttackUnitType": 9,
+            "AffectUnitType": 4,
+            "CounterCoe": 2
+        },
+        {
+            "No": 77,
+            "AttackUnitType": 9,
+            "AffectUnitType": 5,
+            "CounterCoe": 0.35
+        },
+        {
+            "No": 78,
+            "AttackUnitType": 9,
+            "AffectUnitType": 6,
+            "CounterCoe": 1
+        },
+        {
+            "No": 79,
+            "AttackUnitType": 9,
+            "AffectUnitType": 7,
+            "CounterCoe": 0.75
+        },
+        {
+            "No": 80,
+            "AttackUnitType": 9,
+            "AffectUnitType": 8,
+            "CounterCoe": 2
+        },
+        {
+            "No": 81,
+            "AttackUnitType": 9,
+            "AffectUnitType": 9,
+            "CounterCoe": 1
+        }
+    ]
+}

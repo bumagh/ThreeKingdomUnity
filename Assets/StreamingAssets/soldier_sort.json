@@ -1,0 +1,40 @@
+{
+    "Sheet1": [
+        {
+            "SodierSortId": 1,
+            "SodierSortName": "步兵"
+        },
+        {
+            "SodierSortId": 2,
+            "SodierSortName": "法师"
+        },
+        {
+            "SodierSortId": 3,
+            "SodierSortName": "弓箭手"
+        },
+        {
+            "SodierSortId": 4,
+            "SodierSortName": "盾牌兵"
+        },
+        {
+            "SodierSortId": 5,
+            "SodierSortName": "攻城器"
+        },
+        {
+            "SodierSortId": 6,
+            "SodierSortName": "营地"
+        },
+        {
+            "SodierSortId": 7,
+            "SodierSortName": "城防武器"
+        },
+        {
+            "SodierSortId": 8,
+            "SodierSortName": "英雄"
+        },
+        {
+            "SodierSortId": 9,
+            "SodierSortName": "刺客"
+        }
+    ]
+}

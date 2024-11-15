@@ -1,0 +1,74 @@
+{
+    "Sheet1": [
+        {
+            "Id": 1,
+            "GameMacro": "Macro_Energy_SP_Gate",
+            "GameValues": 5
+        },
+        {
+            "Id": 2,
+            "GameMacro": "Macro_Energy_UP_Gate",
+            "GameValues": 500
+        },
+        {
+            "Id": 3,
+            "GameMacro": "Macro_Energy_SP_World",
+            "GameValues": 300
+        },
+        {
+            "Id": 4,
+            "GameMacro": "Macro_Energy_UP_World",
+            "GameValues": 300
+        },
+        {
+            "Id": 5,
+            "GameMacro": "Macro_Energy_UP_Number",
+            "GameValues": 10
+        },
+        {
+            "Id": 6,
+            "GameMacro": "Macro_Campsite_Coefficient",
+            "GameValues": 1.5
+        },
+        {
+            "Id": 7,
+            "GameMacro": "Macro_Levels_Number",
+            "GameValues": 9
+        },
+        {
+            "Id": 8,
+            "GameMacro": "Macro_Sodier_Number",
+            "GameValues": 30
+        },
+        {
+            "Id": 9,
+            "GameMacro": "Macro_Sodier_Up",
+            "GameValues": 50
+        },
+        {
+            "Id": 10,
+            "GameMacro": "Macro_Sodier_level",
+            "GameValues": 10
+        },
+        {
+            "Id": 11,
+            "GameMacro": "Macro_Energy_Every_World",
+            "GameValues": 500
+        },
+        {
+            "Id": 12,
+            "GameMacro": "Macro_Sodier_Initial",
+            "GameValues": "1000#1001#1002#1003#1004#1005#2013"
+        },
+        {
+            "Id": 13,
+            "GameMacro": "Macro_Sodier_UP_World",
+            "GameValues": 5
+        },
+        {
+            "Id": 14,
+            "GameMacro": "Macro_Sodier_UP_Number",
+            "GameValues": 10
+        }
+    ]
+}

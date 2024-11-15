@@ -1,0 +1,169 @@
+{
+    "Sheet1": [
+        {
+            "SoldierLv": 1,
+            "HpBase": 24,
+            "AtkBase": 5,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 500,
+            "EnergyCostBase": 10,
+            "UpgradeBase": 15,
+            "CampEnergy": 50
+        },
+        {
+            "SoldierLv": 2,
+            "HpBase": 33,
+            "AtkBase": 7,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 500,
+            "EnergyCostBase": 12,
+            "UpgradeBase": 18,
+            "CampEnergy": 90
+        },
+        {
+            "SoldierLv": 3,
+            "HpBase": 42,
+            "AtkBase": 9,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 500,
+            "EnergyCostBase": 14,
+            "UpgradeBase": 21,
+            "CampEnergy": 140
+        },
+        {
+            "SoldierLv": 4,
+            "HpBase": 51,
+            "AtkBase": 11,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 500,
+            "EnergyCostBase": 16,
+            "UpgradeBase": 24,
+            "CampEnergy": 200
+        },
+        {
+            "SoldierLv": 5,
+            "HpBase": 60,
+            "AtkBase": 13,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 800,
+            "EnergyCostBase": 18,
+            "UpgradeBase": 27,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 6,
+            "HpBase": 69,
+            "AtkBase": 15,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 800,
+            "EnergyCostBase": 20,
+            "UpgradeBase": 30,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 7,
+            "HpBase": 78,
+            "AtkBase": 17,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 800,
+            "EnergyCostBase": 22,
+            "UpgradeBase": 33,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 8,
+            "HpBase": 87,
+            "AtkBase": 19,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 800,
+            "EnergyCostBase": 24,
+            "UpgradeBase": 36,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 9,
+            "HpBase": 96,
+            "AtkBase": 21,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 800,
+            "EnergyCostBase": 26,
+            "UpgradeBase": 39,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 10,
+            "HpBase": 105,
+            "AtkBase": 23,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 1000,
+            "EnergyCostBase": 28,
+            "UpgradeBase": 42,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 11,
+            "HpBase": 114,
+            "AtkBase": 25,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 1000,
+            "EnergyCostBase": 30,
+            "UpgradeBase": 45,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 12,
+            "HpBase": 123,
+            "AtkBase": 27,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 1000,
+            "EnergyCostBase": 32,
+            "UpgradeBase": 48,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 13,
+            "HpBase": 132,
+            "AtkBase": 29,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 1000,
+            "EnergyCostBase": 34,
+            "UpgradeBase": 51,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 14,
+            "HpBase": 141,
+            "AtkBase": 31,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 1000,
+            "EnergyCostBase": 36,
+            "UpgradeBase": 54,
+            "CampEnergy": ""
+        },
+        {
+            "SoldierLv": 15,
+            "HpBase": 150,
+            "AtkBase": 33,
+            "SpBase": 64,
+            "DefBase": 0,
+            "DodBase": 1000,
+            "EnergyCostBase": 38,
+            "UpgradeBase": 57,
+            "CampEnergy": ""
+        }
+    ]
+}

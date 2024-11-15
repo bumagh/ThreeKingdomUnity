@@ -1,0 +1,24 @@
+{
+    "Sheet1": [
+        {
+            "SoldierTypeId": "单位类型",
+            "SoldierTypeName": "分类名称_table",
+            "Description": "备注"
+        },
+        {
+            "SoldierTypeId": 1,
+            "SoldierTypeName": "士兵",
+            "Description": "可移动"
+        },
+        {
+            "SoldierTypeId": 2,
+            "SoldierTypeName": "塔",
+            "Description": "不可移动"
+        },
+        {
+            "SoldierTypeId": 3,
+            "SoldierTypeName": "英雄",
+            "Description": ""
+        }
+    ]
+}
