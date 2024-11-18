@@ -30,7 +30,6 @@ public class GameController : MonoBehaviour
         {
             var newPlayerPrefab = Resources.Load<GameObject>("Prefabs/Player");
             var newPlayerGo = Instantiate(newPlayerPrefab, rightSeatsTrans[i]);
-            // newPlayerGo.transform.localPosition = rightSeatsTrans[i].localPosition;
         }
     }
 }
