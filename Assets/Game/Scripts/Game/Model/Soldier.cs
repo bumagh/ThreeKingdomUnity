@@ -5,51 +5,13 @@ public class Soldier
 {
     public string SoldierId;
     public string SodierName;
+    public string SkillId;
     public int SodierType;
     public int SodierSort;
-    public string PrefabImageName;
-    public string PrefabIconName;
-    public string PrefabName;
-    public float EnergyCostCoe;
     public float HpCoe;
     public float SpCoe;
     public float DefCoe;
-    public string DodCoe;
-    public string SkillId;
-    public int ConsumablesId;
-    public int SodierCd;
     public SkillData[] skillDatas;
-
-    public Soldier(
-        string soldierId,
-        string soldierName,
-        int soldierType,
-        int soldierSort,
-        string prefabImageName,
-        string prefabIconName,
-        string prefabName,
-        float energyCostCoe,
-        float hpCoe,
-        float spCoe,
-        float defCoe,
-        string dodCoe,
-        string skillId
-    )
-    {
-        SoldierId = soldierId;
-        SodierName = soldierName;
-        SodierType = soldierType;
-        SodierSort = soldierSort;
-        PrefabImageName = prefabImageName;
-        PrefabIconName = prefabIconName;
-        PrefabName = prefabName;
-        EnergyCostCoe = energyCostCoe;
-        HpCoe = hpCoe;
-        SpCoe = spCoe;
-        DefCoe = defCoe;
-        DodCoe = dodCoe;
-        SkillId = skillId;
-    }
 
     public void Initialize()
     {
@@ -84,7 +46,7 @@ public class Soldier
 
     public override string ToString()
     {
-        return $"SoldierId: {SoldierId}, SoldierName: {SodierName}, SoldierType: {SodierType}, SoldierSort: {SodierSort}, PrefabImageName: {PrefabImageName}, PrefabIconName: {PrefabIconName}, PrefabName: {PrefabName}, EnergyCostCoe: {EnergyCostCoe}, HpCoe: {HpCoe}, SpCoe: {SpCoe}, DefCoe: {DefCoe}, DodCoe: {DodCoe}, SkillId: {SkillId}";
+        return $"SoldierId: {SoldierId}, SoldierName: {SodierName}, SoldierType: {SodierType}, SoldierSort: {SodierSort},HpCoe: {HpCoe}, SpCoe: {SpCoe}, DefCoe: {DefCoe}, SkillId: {SkillId}";
     }
 
     public struct SkillData
