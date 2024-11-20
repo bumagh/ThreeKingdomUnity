@@ -1,212 +1,82 @@
 {
-    "Sheet1": [
+    "Sheet1":[
         {
-            "goodsID": 1001,
-            "GoodsMacroID": "GoodsMacro_1001",
-            "GoodsName": "金币",
-            "GoodsDescribed": "羊驼世界的交易货币。",
-            "GoodsTypeId": 1,
-            "GoodsIcon": "item_1001"
+          "GoodsID": 1001,
+          "GoodsName": "金币",
+          "GoodsDescribed": "货币",
+          "GoodsTypeId": 1
         },
         {
-            "goodsID": 1002,
-            "GoodsMacroID": "GoodsMacro_1002",
-            "GoodsName": "粮草",
-            "GoodsDescribed": "羊驼世界的基础食品",
-            "GoodsTypeId": 2,
-            "GoodsIcon": "item_1002"
+          "GoodsID": 1002,
+          "GoodsName": "银两",
+          "GoodsDescribed": "货币",
+          "GoodsTypeId": 1
         },
         {
-            "goodsID": 1003,
-            "GoodsMacroID": "GoodsMacro_1003",
-            "GoodsName": "士兵数量",
-            "GoodsDescribed": "补充士兵数量",
-            "GoodsTypeId": 2,
-            "GoodsIcon": "item_1003"
+          "GoodsID": 1003,
+          "GoodsName": "招贤令",
+          "GoodsDescribed": "可招募副将",
+          "GoodsTypeId": 2
         },
         {
-            "goodsID": 1004,
-            "GoodsMacroID": "GoodsMacro_1004",
-            "GoodsName": "士兵上限",
-            "GoodsDescribed": "补充士兵上限",
-            "GoodsTypeId": 2,
-            "GoodsIcon": "item_1004"
+          "GoodsID": 1004,
+          "GoodsName": "回命丹",
+          "GoodsDescribed": "补充100%hp",
+          "GoodsTypeId": 3
         },
         {
-            "goodsID": 3001,
-            "GoodsMacroID": "GoodsMacro_3001",
-            "GoodsName": "炮灰驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0000"
+          "GoodsID": 1005,
+          "GoodsName": "回气丹",
+          "GoodsDescribed": "补充100%mp",
+          "GoodsTypeId": 3
         },
         {
-            "goodsID": 3002,
-            "GoodsMacroID": "GoodsMacro_3002",
-            "GoodsName": "法师驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0028"
+          "GoodsID": 1006,
+          "GoodsName": "战马",
+          "GoodsDescribed": "提供属性加成",
+          "GoodsTypeId": 4
         },
         {
-            "goodsID": 3003,
-            "GoodsMacroID": "GoodsMacro_3003",
-            "GoodsName": "弓箭驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0113"
+          "GoodsID": 1007,
+          "GoodsName": "副将经验书",
+          "GoodsDescribed": "副将直接升1级",
+          "GoodsTypeId": 5
         },
         {
-            "goodsID": 3004,
-            "GoodsMacroID": "GoodsMacro_3004",
-            "GoodsName": "黑甲驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0075"
+          "GoodsID": 1008,
+          "GoodsName": "技能书",
+          "GoodsDescribed": "技能熟练度加100",
+          "GoodsTypeId": 5
         },
         {
-            "goodsID": 3005,
-            "GoodsMacroID": "GoodsMacro_3005",
-            "GoodsName": "炮弹驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0004"
+          "GoodsID": 1009,
+          "GoodsName": "初级战靴",
+          "GoodsDescribed": "增加移动速度",
+          "GoodsTypeId": 6
         },
         {
-            "goodsID": 3006,
-            "GoodsMacroID": "GoodsMacro_3006",
-            "GoodsName": "特洛驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0019"
+          "GoodsID": 1010,
+          "GoodsName": "初级战刀",
+          "GoodsDescribed": "增加攻击力",
+          "GoodsTypeId": 6
         },
         {
-            "goodsID": 3007,
-            "GoodsMacroID": "GoodsMacro_3007",
-            "GoodsName": "诗歌驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0025"
+          "GoodsID": 1011,
+          "GoodsName": "初级战衣",
+          "GoodsDescribed": "增加防御,最大hp和mp",
+          "GoodsTypeId": 6
         },
         {
-            "goodsID": 3008,
-            "GoodsMacroID": "GoodsMacro_3008",
-            "GoodsName": "牛仔驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0064"
+          "GoodsID": 1012,
+          "GoodsName": "初级裤子",
+          "GoodsDescribed": "增加防御",
+          "GoodsTypeId": 6
         },
         {
-            "goodsID": 3009,
-            "GoodsMacroID": "GoodsMacro_3009",
-            "GoodsName": "蛮驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0068"
-        },
-        {
-            "goodsID": 3010,
-            "GoodsMacroID": "GoodsMacro_3010",
-            "GoodsName": "绝命毒驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0069"
-        },
-        {
-            "goodsID": 3011,
-            "GoodsMacroID": "GoodsMacro_3011",
-            "GoodsName": "巨斧驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0080"
-        },
-        {
-            "goodsID": 3012,
-            "GoodsMacroID": "GoodsMacro_3012",
-            "GoodsName": "刺客驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S10052"
-        },
-        {
-            "goodsID": 3013,
-            "GoodsMacroID": "GoodsMacro_3013",
-            "GoodsName": "祭祀驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0092"
-        },
-        {
-            "goodsID": 3014,
-            "GoodsMacroID": "GoodsMacro_3014",
-            "GoodsName": "黑法驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0103"
-        },
-        {
-            "goodsID": 3015,
-            "GoodsMacroID": "GoodsMacro_3015",
-            "GoodsName": "绷带驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0104"
-        },
-        {
-            "goodsID": 3016,
-            "GoodsMacroID": "GoodsMacro_3016",
-            "GoodsName": "长枪驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0047"
-        },
-        {
-            "goodsID": 3017,
-            "GoodsMacroID": "GoodsMacro_3017",
-            "GoodsName": "吸血鬼驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0027"
-        },
-        {
-            "goodsID": 3101,
-            "GoodsMacroID": "GoodsMacro_3101",
-            "GoodsName": "城墙碎片",
-            "GoodsDescribed": "进阶建筑所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S1012"
-        },
-        {
-            "goodsID": 3102,
-            "GoodsMacroID": "GoodsMacro_3102",
-            "GoodsName": "箭塔碎片",
-            "GoodsDescribed": "进阶建筑所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S1013"
-        },
-        {
-            "goodsID": 3103,
-            "GoodsMacroID": "GoodsMacro_3103",
-            "GoodsName": "炮塔碎片",
-            "GoodsDescribed": "进阶建筑所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S1014"
-        },
-        {
-            "goodsID": 3104,
-            "GoodsMacroID": "GoodsMacro_3104",
-            "GoodsName": "魔法塔碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S1015"
-        },
-        {
-            "goodsID": 3201,
-            "GoodsMacroID": "GoodsMacro_3201",
-            "GoodsName": "魔王驼碎片",
-            "GoodsDescribed": "进阶单位所需道具",
-            "GoodsTypeId": 3,
-            "GoodsIcon": "item_S0047"
+          "GoodsID": 1013,
+          "GoodsName": "初级腰带",
+          "GoodsDescribed": "增加防御",
+          "GoodsTypeId": 6
         }
-    ]
+      ]
 }
