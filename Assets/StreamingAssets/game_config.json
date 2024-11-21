@@ -3,7 +3,7 @@
         {
             "Id": 1,
             "GameMacro": "Macro_Sodier_Initial",
-            "GameValues": "1000#1001#1002#1003#1004#1005#2013"
+            "GameValues": "1000#1001"
         }
     ]
 }
