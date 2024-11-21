@@ -13,11 +13,15 @@ public class GameController : MonoBehaviour
     private List<Player> players = new List<Player>();
     private string curRoundPlayerId = null;
     private Text curRoundText;
+    private Text menuTipText;
+    private GameObject roundMenuPanel;
     void Awake()
     {
         leftSeats = GameObject.Find("GameRoot/LeftSeats");
         rightSeats = GameObject.Find("GameRoot/RightSeats");
         curRoundText = GameObject.Find("Canvas/RoundTip").GetComponent<Text>();
+        menuTipText = GameObject.Find("Canvas/MenuTip").GetComponent<Text>();
+        roundMenuPanel = GameObject.Find("Canvas/RoundMenu/Panel");
         for (int i = 0; i < leftSeats.transform.childCount; i++)
         {
             leftSeatsTrans[i] = leftSeats.transform.GetChild(i);
@@ -65,9 +69,18 @@ public class GameController : MonoBehaviour
         });
         curRoundPlayerId = players[0].soldierId;
         UpdateCurRoundPlayerText(curRoundPlayerId);
-
+        if (curRoundPlayerId == "1000")
+        {
+            EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, true);
+        }
+        else
+        {
+            roundMenuPanel.SetActive(false);
+        }
+        //显示操作UI
     }
-    private void UpdateCurRoundPlayerText(string id){
-        curRoundText.text = "当前回合:"+ConfigData.soldiers.Find(ele=>ele.SoldierId==id).SodierName;
+    private void UpdateCurRoundPlayerText(string id)
+    {
+        curRoundText.text = "当前回合:" + ConfigData.soldiers.Find(ele => ele.SoldierId == id).SodierName;
     }
 }
