@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private TextMeshPro atkTmp;
     [HideInInspector]
     private TextMeshPro speedTmp;
+    public Player player = new Player();
     void Awake()
     {
         nameTmp = transform.Find("NameTextTmp").GetComponent<TextMeshPro>();
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
         atkTmp = transform.Find("AtkTextTmp").GetComponent<TextMeshPro>();
         speedTmp = transform.Find("SpeedTextTmp").GetComponent<TextMeshPro>();
     }
-    public void Init(string name, int hp, int atk, int speed)
+    public void Init(string name, int hp, int atk, int speed, Soldier soldier)
     {
         nameTmp = transform.Find("NameTextTmp").GetComponent<TextMeshPro>();
         hpTmp = transform.Find("HpTextTmp").GetComponent<TextMeshPro>();
@@ -30,5 +31,11 @@ public class PlayerController : MonoBehaviour
         hpTmp.text = "hp:" + hp.ToString();
         atkTmp.text = "atk:" + atk.ToString();
         speedTmp.text = "sp:" + speed.ToString();
+        player.hp = hp;
+        player.atk = atk;
+        player.mp = hp;
+        player.sp = speed;
+        player.sodierName = soldier.SodierName;
+        player.soldierId = soldier.SoldierId;
     }
 }

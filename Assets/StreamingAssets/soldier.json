@@ -2,7 +2,7 @@
     "Sheet1": [
         {
             "SoldierId": 1000,
-            "SodierName": "张飞",
+            "SodierName": "主将",
             "SkillId": "{0,100,[10003,10000,0]}",
             "SodierType": 1,
             "SodierSort": 3,
