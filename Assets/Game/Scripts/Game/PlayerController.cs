@@ -59,6 +59,11 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("player clicked!");
     }
+    public void TakeDamage(int damage)
+    {
+        player.hp -= damage;
+        hpTmp.text = "hp:" + player.hp.ToString();
+    }
     public void PlayAttackAnim()
     {
 
@@ -90,7 +95,9 @@ public class PlayerController : MonoBehaviour
     void Attack()
     {
         // 在这里添加攻击逻辑，例如减少目标的生命值
-        // target.GetComponent<HealthScript>()?.TakeDamage(attackDamage);
+        //TODO:增加防御
+        int realDmg = player.atk;
+        target.GetComponent<PlayerController>()?.TakeDamage(realDmg);
     }
     void MoveToTarget()
     {
@@ -106,7 +113,6 @@ public class PlayerController : MonoBehaviour
         // 移动对象
         transform.position += direction * moveSpeed * Time.deltaTime;
 
-        Debug.Log(Vector3.Distance(transform.position, originalPosition));
         // 检查是否到达原始位置
         if (Vector3.Distance(transform.position, originalPosition) < 0.1f)
         {
