@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
             newPlayerGo.transform.position = leftSeatsTrans[i].position;
             var playerController = newPlayerGo.GetComponent<PlayerController>();
             playerController.Init(ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]).SodierName, 100, 1, 15 + i, ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]));
+            playerController.isLeft = true;
             players.Add(playerController.player);
             playerCtrls.Add(playerController);
         }
@@ -51,6 +52,7 @@ public class GameController : MonoBehaviour
             if (i == 0)
             {
                 playerController.Init("主将", 100, 100, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
+                playerController.isLeft = false;
                 players.Add(playerController.player);
                 playerCtrls.Add(playerController);
             }
@@ -67,6 +69,24 @@ public class GameController : MonoBehaviour
 
     private void SetNextRoundPlayerId()
     {
+        //判断是否胜利或失败
+        bool leftPlayerLive = false;
+        bool rightPlayerLive = false;
+        foreach (var item in playerCtrls)
+        {
+            if (item.player.hp > 0 && item.isLeft)
+            {
+                leftPlayerLive = true;
+            }
+            if (item.player.hp > 0 && item.isLeft == false)
+            {
+                rightPlayerLive = true;
+            }
+        }
+        if(rightPlayerLive){
+            //玩家胜利
+            
+        }
         int nextIndex = 0;
         players.Sort((a, b) =>
            {

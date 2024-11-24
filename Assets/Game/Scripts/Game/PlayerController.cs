@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     private TextMeshPro speedTmp;
     public Player player = new Player();
+    public bool isLeft = true;
     public GameObject target;           // 被攻击的目标
     public float moveSpeed = 15f;        // 移动速度
     public float attackRange = 1f;      // 攻击范围
