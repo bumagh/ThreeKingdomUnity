@@ -124,14 +124,13 @@ public class GameController : MonoBehaviour
             // 进行射线检测，获取命中到的目标
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
 
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.gameObject.GetComponent<PlayerController>().player.hp > 0 && hit.collider.gameObject.GetComponent<PlayerController>().player.uuid != curRoundPlayerId)
             {
                 // 打印出被点击对象的tag名称或其他信息
                 // Debug.Log(hit.collider.gameObject.GetComponent<PlayerController>().player.sodierName);
                 EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, false);
                 playerCtrls.Find(ele => ele.player.uuid == curRoundPlayerId).target = hit.collider.gameObject;
                 // 在此处添加点击后的处理逻辑
-
             }
         }
     }
