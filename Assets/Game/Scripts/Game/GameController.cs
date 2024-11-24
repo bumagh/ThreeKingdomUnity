@@ -11,17 +11,14 @@ public class GameController : MonoBehaviour
     private Transform[] rightSeatsTrans = new Transform[3];
     private string[] enemyIds = new string[3] { "1006", "1006", "1006" };
     private List<Player> players = new List<Player>();
+    private List<PlayerController> playerCtrls = new List<PlayerController>();
     private string curRoundPlayerId = null;
     private Text curRoundText;
-    private Text menuTipText;
-    private GameObject roundMenuPanel;
     void Awake()
     {
         leftSeats = GameObject.Find("GameRoot/LeftSeats");
         rightSeats = GameObject.Find("GameRoot/RightSeats");
         curRoundText = GameObject.Find("Canvas/RoundTip").GetComponent<Text>();
-        menuTipText = GameObject.Find("Canvas/MenuTip").GetComponent<Text>();
-        roundMenuPanel = GameObject.Find("Canvas/RoundMenu/Panel");
         for (int i = 0; i < leftSeats.transform.childCount; i++)
         {
             leftSeatsTrans[i] = leftSeats.transform.GetChild(i);
@@ -43,6 +40,7 @@ public class GameController : MonoBehaviour
             var playerController = newPlayerGo.GetComponent<PlayerController>();
             playerController.Init(ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]).SodierName, 100, 1, 15 + i, ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]));
             players.Add(playerController.player);
+            playerCtrls.Add(playerController);
         }
         // var initIds = ConfigData.gameConfigs.Find(ele=>ele.GameMacro=="").GameValues;
         for (int i = 0; i < rightSeatsTrans.Length; i++)
@@ -54,6 +52,7 @@ public class GameController : MonoBehaviour
             {
                 playerController.Init("主将", 100, 1, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
                 players.Add(playerController.player);
+                playerCtrls.Add(playerController);
             }
             else
             {
@@ -75,7 +74,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            roundMenuPanel.SetActive(false);
+            EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, false);
         }
         //显示操作UI
     }
@@ -83,4 +82,29 @@ public class GameController : MonoBehaviour
     {
         curRoundText.text = "当前回合:" + ConfigData.soldiers.Find(ele => ele.SoldierId == id).SodierName;
     }
+    void Update()
+    {
+        // 检查鼠标左键是否被按下
+        if (Input.GetMouseButtonDown(0))
+        {
+            // 获取鼠标在屏幕上的位置
+            Vector3 mousePosition = Input.mousePosition;
+            // 将屏幕坐标转换为射线
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+
+            // 进行射线检测，获取命中到的目标
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+
+            if (hit.collider != null)
+            {
+                // 打印出被点击对象的tag名称或其他信息
+                // Debug.Log(hit.collider.gameObject.GetComponent<PlayerController>().player.sodierName);
+                EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, false);
+                playerCtrls.Find(ele => ele.player.soldierId == curRoundPlayerId).target = hit.collider.gameObject;
+                // 在此处添加点击后的处理逻辑
+
+            }
+        }
+    }
+
 }
