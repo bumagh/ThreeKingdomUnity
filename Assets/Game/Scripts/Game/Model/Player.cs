@@ -10,7 +10,7 @@ public class Player
     public int mp;
     public int atk;
     public int sp;
-
+    public string uuid;
     public Player()
     {
     }

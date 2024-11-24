@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
         {
             rightSeatsTrans[i] = rightSeats.transform.GetChild(i);
         }
-
+        EventManager.AddEvent(EventName.SetNextRoundPlayerId, this.SetNextRoundPlayerId);
     }
     async void Start()
     {
@@ -61,22 +61,47 @@ public class GameController : MonoBehaviour
                 rightSeatsTrans[i].gameObject.SetActive(false);
             }
         }
-        //根据场上存活的单位的速度来生成回合顺序
+
+        SetNextRoundPlayerId();
+    }
+
+    private void SetNextRoundPlayerId()
+    {
+        int nextIndex = 0;
         players.Sort((a, b) =>
+           {
+               return b.sp - a.sp;
+           });
+        //根据场上存活的单位的速度来生成回合顺序
+        if (curRoundPlayerId == null)
         {
-            return b.sp - a.sp;
-        });
-        curRoundPlayerId = players[0].soldierId;
-        UpdateCurRoundPlayerText(curRoundPlayerId);
-        if (curRoundPlayerId == "1000")
+
+        }
+        else
+        {
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (curRoundPlayerId == players[i].uuid)
+                {
+                    nextIndex = (i + 1) % players.Count;
+                    break;
+                }
+            }
+        }
+        //显示操作UI
+
+        curRoundPlayerId = players[nextIndex].uuid;
+        UpdateCurRoundPlayerText(players[nextIndex].soldierId);
+        if (players.Find(ele => ele.uuid == curRoundPlayerId).soldierId == "1000")
         {
             EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, true);
         }
         else
         {
             EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, false);
+            //机器人的回合
+            playerCtrls.Find(ele => ele.player.uuid == curRoundPlayerId).target = playerCtrls.Find(ele => ele.player.soldierId == "1000").gameObject;
         }
-        //显示操作UI
     }
     private void UpdateCurRoundPlayerText(string id)
     {
@@ -85,7 +110,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         // 检查鼠标左键是否被按下
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && players.Find(ele => ele.uuid == curRoundPlayerId).soldierId == "1000")
         {
             // 获取鼠标在屏幕上的位置
             Vector3 mousePosition = Input.mousePosition;
@@ -100,11 +125,15 @@ public class GameController : MonoBehaviour
                 // 打印出被点击对象的tag名称或其他信息
                 // Debug.Log(hit.collider.gameObject.GetComponent<PlayerController>().player.sodierName);
                 EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, false);
-                playerCtrls.Find(ele => ele.player.soldierId == curRoundPlayerId).target = hit.collider.gameObject;
+                playerCtrls.Find(ele => ele.player.uuid == curRoundPlayerId).target = hit.collider.gameObject;
                 // 在此处添加点击后的处理逻辑
 
             }
         }
     }
 
+    void OnDestroy()
+    {
+        EventManager.RemoveEvent(EventName.SetNextRoundPlayerId, this.SetNextRoundPlayerId);
+    }
 }

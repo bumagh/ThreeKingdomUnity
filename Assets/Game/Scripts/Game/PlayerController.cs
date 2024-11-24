@@ -1,5 +1,7 @@
 
+using System;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         player.sp = speed;
         player.sodierName = soldier.SodierName;
         player.soldierId = soldier.SoldierId;
+        player.uuid = Guid.NewGuid().ToString();
     }
     void OnClick()
     {
@@ -103,6 +106,7 @@ public class PlayerController : MonoBehaviour
         // 移动对象
         transform.position += direction * moveSpeed * Time.deltaTime;
 
+        Debug.Log(Vector3.Distance(transform.position, originalPosition));
         // 检查是否到达原始位置
         if (Vector3.Distance(transform.position, originalPosition) < 0.1f)
         {
@@ -110,6 +114,8 @@ public class PlayerController : MonoBehaviour
             isAttacking = false;
             isReturning = false;
             target = null;
+            EventManager.DispatchEvent(EventName.SetNextRoundPlayerId);
+
         }
     }
 

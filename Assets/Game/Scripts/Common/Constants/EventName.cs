@@ -9,4 +9,6 @@ using UnityEngine;
 public class EventName
 {
     public const int ShowBattleMenuPanel = 10001;
+    public const int SetNextRoundPlayerId = 10002;
+    
 }
