@@ -55,14 +55,20 @@ public class PlayerController : MonoBehaviour
         player.soldierId = soldier.SoldierId;
         player.uuid = Guid.NewGuid().ToString();
     }
-    void OnClick()
-    {
-        Debug.Log("player clicked!");
-    }
     public void TakeDamage(int damage)
     {
         player.hp -= damage;
-        hpTmp.text = "hp:" + player.hp.ToString();
+        if (player.hp <= 0)
+        {
+            player.hp = 0;
+            Die();
+        }
+        else
+            hpTmp.text = "hp:" + player.hp.ToString();
+    }
+    public void Die()
+    {
+        hpTmp.text = "已阵亡";
     }
     public void PlayAttackAnim()
     {

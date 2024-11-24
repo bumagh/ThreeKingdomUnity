@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
             var playerController = newPlayerGo.GetComponent<PlayerController>();
             if (i == 0)
             {
-                playerController.Init("主将", 100, 1, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
+                playerController.Init("主将", 100, 100, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
                 players.Add(playerController.player);
                 playerCtrls.Add(playerController);
             }
@@ -84,6 +84,10 @@ public class GameController : MonoBehaviour
                 if (curRoundPlayerId == players[i].uuid)
                 {
                     nextIndex = (i + 1) % players.Count;
+                    while (players[nextIndex].hp <= 0)
+                    {
+                        nextIndex = (nextIndex + 1) % players.Count;
+                    }
                     break;
                 }
             }
