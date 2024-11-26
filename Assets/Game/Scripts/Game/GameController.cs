@@ -83,9 +83,10 @@ public class GameController : MonoBehaviour
                 rightPlayerLive = true;
             }
         }
-        if(rightPlayerLive){
+        if (rightPlayerLive && leftPlayerLive == false)
+        {
             //玩家胜利
-            
+            Tools.ShowTip("游戏胜利");
         }
         int nextIndex = 0;
         players.Sort((a, b) =>
@@ -133,6 +134,7 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
+        if (curRoundPlayerId == null) return;
         // 检查鼠标左键是否被按下
         if (Input.GetMouseButtonDown(0) && players.Find(ele => ele.uuid == curRoundPlayerId).soldierId == "1000")
         {
