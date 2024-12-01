@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public static class Tools
 {
@@ -16,5 +17,14 @@ public static class Tools
                 battleMsg.UpdateContent(textStr);
             }
         }
+    }
+    public static void ShowConfirm(string textStr, UnityAction confirmAction = null, UnityAction cancelAction = null)
+    {
+        var panelPrefab = Resources.Load<GameObject>("Prefabs/Popup/ConfirmPanel");
+        if (panelPrefab == null)
+            return;
+        var panelObj = GameObject.Instantiate(panelPrefab);
+        var panel = panelObj.GetComponent<ConfirmPanel>();
+        panel.Init(textStr, confirmAction, cancelAction);
     }
 }

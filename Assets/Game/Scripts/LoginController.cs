@@ -11,7 +11,7 @@ public class LoginController : MonoBehaviour
         startBtn = GameObject.Find("Canvas/StartBtn").GetComponent<Button>();
         startBtn.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Arcade");
         });
     }
 }

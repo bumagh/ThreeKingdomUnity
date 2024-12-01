@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
@@ -86,7 +87,11 @@ public class GameController : MonoBehaviour
         if (rightPlayerLive && leftPlayerLive == false)
         {
             //玩家胜利
-            Tools.ShowTip("游戏胜利");
+            // Tools.ShowTip("游戏胜利");
+            Tools.ShowConfirm("游戏胜利", () =>
+            {
+                SceneManager.LoadScene("Arcade");
+            });
         }
         int nextIndex = 0;
         players.Sort((a, b) =>
