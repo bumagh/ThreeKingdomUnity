@@ -8,6 +8,7 @@ public static class ConfigData
     public static List<GameConfig> gameConfigs = new List<GameConfig>();
     public static List<Skill> skills = new List<Skill>();
     public static List<Goods> goods = new List<Goods>();
+    public static List<Level> levels = new List<Level>();
     public static async Task LoadConfigsAsync()
     {
         if (isLoad)
@@ -17,6 +18,7 @@ public static class ConfigData
         gameConfigs = await JsonUtil.DeserializeJsonToObjectAsync<GameConfig>("game_config.json");
         soldiers = await JsonUtil.DeserializeJsonToObjectAsync<Soldier>("soldier.json");
         goods = await JsonUtil.DeserializeJsonToObjectAsync<Goods>("goods.json");
+        levels = await JsonUtil.DeserializeJsonToObjectAsync<Level>("level.json");
         foreach (var soldier in soldiers)
         {
             soldier.Initialize();

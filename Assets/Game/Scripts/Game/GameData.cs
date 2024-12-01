@@ -104,7 +104,27 @@ public class GameData : MonoSingleton<GameData>
         );
         return result;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="exp"></param>
+    /// <returns>还差多少升级</returns>
+    public int UpPlayer(int exp)
+    {
+        int curExp = PlayerData.GetInt(PlayerData.Exp, 0);
+        int curLevel = PlayerData.GetInt(PlayerData.Level, 1);
+        int newExp = curExp + exp;
+        while (newExp >= ConfigData.levels.Find(ele => ele.id == curLevel).needExp)
+        {
+            newExp -= ConfigData.levels.Find(ele => ele.id == curLevel).needExp;
+            curLevel++;
+            PlayerData.SetInt(PlayerData.Hp, ConfigData.levels.Find(ele => ele.id == curLevel).blood);
+            PlayerData.SetInt(PlayerData.Level, curLevel);
+        }
+        PlayerData.SetInt(PlayerData.Exp, newExp);
+        int nextExp = 0;
+        return nextExp;
+    }
 
     private void UpdateItems()
     {

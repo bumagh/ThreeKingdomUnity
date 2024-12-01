@@ -27,7 +27,7 @@ public class ArcadeTopPanel : MonoBehaviour
 
         nameText.text = PlayerData.GetString(PlayerData.NickName, "三国新人");
         coinText.text = PlayerData.GetInt(PlayerData.Coin, 100).ToString();
-        levelText.text = PlayerData.GetInt(PlayerData.Level, 0).ToString();
+        levelText.text = PlayerData.GetInt(PlayerData.Level, 1).ToString();
         expText.text = PlayerData.GetInt(PlayerData.Exp, 0).ToString();
         jobText.text = PlayerData.GetString(PlayerData.Job, "武士");
         hpText.text = PlayerData.GetInt(PlayerData.Hp, 100).ToString();

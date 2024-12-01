@@ -88,7 +88,10 @@ public class GameController : MonoBehaviour
         {
             //玩家胜利
             // Tools.ShowTip("游戏胜利");
-            Tools.ShowConfirm("游戏胜利", () =>
+            int nextNeedExp = GameData.Instance.UpPlayer(10);
+            PlayerData.SetInt(PlayerData.Coin, PlayerData.GetInt(PlayerData.Coin, 0) + 1);
+            // Tools.ShowConfirm("游戏胜利,经验+10,金币+1,差" + nextNeedExp + "经验升级", () =>
+            Tools.ShowConfirm("游戏胜利,经验+10,金币+1", () =>
             {
                 SceneManager.LoadScene("Arcade");
             }, () =>
