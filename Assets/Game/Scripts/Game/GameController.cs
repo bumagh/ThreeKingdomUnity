@@ -91,6 +91,19 @@ public class GameController : MonoBehaviour
             Tools.ShowConfirm("游戏胜利", () =>
             {
                 SceneManager.LoadScene("Arcade");
+            }, () =>
+            {
+                SceneManager.LoadScene("Arcade");
+            });
+        }
+        if (rightPlayerLive == false && leftPlayerLive == true)
+        {
+            Tools.ShowConfirm("游戏失败", () =>
+            {
+                SceneManager.LoadScene("Arcade");
+            }, () =>
+            {
+                SceneManager.LoadScene("Arcade");
             });
         }
         int nextIndex = 0;
