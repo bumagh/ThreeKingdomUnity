@@ -10,6 +10,14 @@ public static class PlayerData
        public const string BgmVolume = "BgmVolume";
     public const string EffectVolume = "EffectVolume";
     public const string Language = "Language";
+    public const string CurMap = "CurMap";
+    public const string NickName = "NickName";
+    public const string Coin = "Coin";
+    public const string Level = "Level";
+    public const string Exp = "Exp";
+    public const string Job = "Job";
+    public const string Hp = "Hp";
+    public const string Mp = "Mp";
 
     public static string userId;
 
