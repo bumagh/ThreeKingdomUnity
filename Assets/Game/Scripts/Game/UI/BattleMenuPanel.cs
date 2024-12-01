@@ -32,7 +32,7 @@ public class BattleMenuPanel : MonoBehaviour
     private void ShowBattleMenuPanel(bool show)
     {
         panel.SetActive(show);
-        cancelBtn.gameObject.SetActive(show);
+        cancelBtn.gameObject.SetActive(false);
         menuTipText.gameObject.SetActive(show);
     }
 
