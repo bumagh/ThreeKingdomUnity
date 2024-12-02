@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
         speedTmp = transform.Find("SpeedTextTmp").GetComponent<TextMeshPro>();
         nameTmp.text = name;
         hpTmp.text = "hp:" + hp.ToString();
-        atkTmp.text = "atk:" + atk.ToString();
-        speedTmp.text = "sp:" + speed.ToString();
+        atkTmp.text = "攻击:" + atk.ToString();
+        speedTmp.text = "速度:" + speed.ToString();
         player.hp = hp;
         player.atk = atk;
         player.mp = hp;
