@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
             var newPlayerGo = Instantiate(newPlayerPrefab, GameObject.Find("GameRoot").transform);
             newPlayerGo.transform.position = leftSeatsTrans[i].position;
             var playerController = newPlayerGo.GetComponent<PlayerController>();
-            playerController.Init(ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]).SodierName, 100, 1, 15 + i, ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]));
+            playerController.Init(ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]).SodierName, 100, 10, 15 + i, ConfigData.soldiers.Find(ele => ele.SoldierId == enemyIds[0]));
             playerController.isLeft = true;
             players.Add(playerController.player);
             playerCtrls.Add(playerController);
@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour
             var playerController = newPlayerGo.GetComponent<PlayerController>();
             if (i == 0)
             {
-                playerController.Init("主将", PlayerData.GetInt(PlayerData.Hp,100), 100, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
+                playerController.Init("主将", PlayerData.GetInt(PlayerData.Hp,100), 10, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
                 playerController.isLeft = false;
                 players.Add(playerController.player);
                 playerCtrls.Add(playerController);
