@@ -62,5 +62,5 @@
         {"extensionId":"ms-dotnettools.csdevkit","path":"C:\\Program Files\\dotnet\\dotnet.exe"},
         {"extensionId":"visualstudiotoolsforunity.vstuc","path":"C:\\Program Files\\dotnet\\dotnet.exe"}
     ],
-    "dotnet.defaultSolution": "ThreeKingdomUnity.sln"
+    "dotnet.defaultSolution": "ThreeKingdomUnityWeb.sln"
 }
