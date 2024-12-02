@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -30,7 +31,18 @@ public class GameController : MonoBehaviour
             rightSeatsTrans[i] = rightSeats.transform.GetChild(i);
         }
         EventManager.AddEvent(EventName.SetNextRoundPlayerId, this.SetNextRoundPlayerId);
+        EventManager.AddEvent(EventName.SetGamingState, this.SetGamingState);
     }
+    void OnDestroy()
+    {
+        EventManager.RemoveEvent(EventName.SetNextRoundPlayerId, this.SetNextRoundPlayerId);
+        EventManager.RemoveEvent(EventName.SetGamingState, this.SetGamingState);
+    }
+    private void SetGamingState()
+    {
+        isGaming = !isGaming;
+    }
+
     async void Start()
     {
         await ConfigData.LoadConfigsAsync();
@@ -185,8 +197,5 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void OnDestroy()
-    {
-        EventManager.RemoveEvent(EventName.SetNextRoundPlayerId, this.SetNextRoundPlayerId);
-    }
+
 }

@@ -1,17 +1,21 @@
 
 using System;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class BattleMenuPanel : MonoBehaviour
 {
     private GameObject panel;
     private Button atkBtn;
+    private Button runBtn;
     private Text menuTipText;
     private Button cancelBtn;
     void Awake()
     {
         panel = transform.Find("Panel").gameObject;
         atkBtn = transform.Find("Panel/AtkBtn").GetComponent<Button>();
+        runBtn = transform.Find("Panel/RunBtn").GetComponent<Button>();
         cancelBtn = transform.Find("CancelBtn").GetComponent<Button>();
         menuTipText = transform.Find("MenuTip").GetComponent<Text>();
         EventManager.AddEvent<bool>(EventName.ShowBattleMenuPanel, this.ShowBattleMenuPanel);
@@ -21,6 +25,19 @@ public class BattleMenuPanel : MonoBehaviour
             cancelBtn.gameObject.SetActive(true);
             menuTipText.text = "请选择需要攻击的敌人";
         });
+
+        runBtn.onClick.AddListener(() =>
+     {
+         //TODO:增加逃跑概率
+         EventManager.DispatchEvent(EventName.SetGamingState);
+         Tools.ShowConfirm("逃跑成功", () =>
+            {
+                SceneManager.LoadScene("Arcade");
+            }, () =>
+            {
+                SceneManager.LoadScene("Arcade");
+            });
+     });
         cancelBtn.onClick.AddListener(() =>
         {
             cancelBtn.gameObject.SetActive(false);
