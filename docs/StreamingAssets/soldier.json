@@ -1,0 +1,74 @@
+{
+    "Sheet1": [
+        {
+            "SoldierId": 1000,
+            "SodierName": "主将",
+            "SkillId": "{0,100,[10003,10000,0]}",
+            "SodierType": 1,
+            "SodierSort": 3,
+            "HpCoe": 1,
+            "SpCoe": 1,
+            "DefCoe": 1
+        },
+        {
+            "SoldierId": 1001,
+            "SodierName": "吕布",
+            "SkillId": "{0,100,[10003,10000,0]}",
+            "SodierType": 1,
+            "SodierSort": 3,
+            "HpCoe": 1,
+            "SpCoe": 1,
+            "DefCoe": 1
+        },
+        {
+            "SoldierId": 1002,
+            "SodierName": "孙尚香",
+            "SkillId": "{0,100,[10005,10000,0]}",
+            "SodierType": 1,
+            "SodierSort": 5,
+            "HpCoe": 1,
+            "SpCoe": 1,
+            "DefCoe": 1
+        },
+        {
+            "SoldierId": 1003,
+            "SodierName": "刘备",
+            "SkillId": "{0,100,[10002,10000,0]}",
+            "SodierType": 1,
+            "SodierSort": 2,
+            "HpCoe": 1,
+            "SpCoe": 1,
+            "DefCoe": 1
+        },
+        {
+            "SoldierId": 1004,
+            "SodierName": "关羽",
+            "SkillId": "{0,100,[10003,10000,0]}",
+            "SodierType": 1,
+            "SodierSort": 3,
+            "HpCoe": 1,
+            "SpCoe": 1,
+            "DefCoe": 1
+        },
+        {
+            "SoldierId": 1005,
+            "SodierName": "华佗",
+            "SkillId": "{0,100,[10004,10000,0]}",
+            "SodierType": 1,
+            "SodierSort": 4,
+            "HpCoe": 1,
+            "SpCoe": 1,
+            "DefCoe": 1
+        },
+        {
+            "SoldierId": 1006,
+            "SodierName": "小偷",
+            "SkillId": "{0,100,[10001,10000,0]}",
+            "SodierType": 1,
+            "SodierSort": 1,
+            "HpCoe": 1,
+            "SpCoe": 1,
+            "DefCoe": 1
+        }
+    ]
+}

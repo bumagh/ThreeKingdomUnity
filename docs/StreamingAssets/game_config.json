@@ -1,0 +1,9 @@
+{
+    "Sheet1": [
+        {
+            "Id": 1,
+            "GameMacro": "Macro_Sodier_Initial",
+            "GameValues": "1001#1002"
+        }
+    ]
+}

@@ -1,0 +1,314 @@
+{
+    "Sheet1":[
+        {
+          "SkillId": "技能ID",
+          "SkillName": "技能名称",
+          "Description": "效果说明，策划备注",
+          "AtkCoe": "技能伤害系数_int",
+          "MpCost": "能量消耗_int",
+          "RoundCount": "技能持续回合_int",
+          "SelectType": "技能选取方式",
+          "SelectCount": "技能效果范围"
+        },
+        {
+          "SkillId": 10001,
+          "SkillName": "常人普攻",
+          "Description": "常人普攻",
+          "AtkCoe": 0.7,
+          "MpCost": 0,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10002,
+          "SkillName": "商人普攻",
+          "Description": "商人普攻",
+          "AtkCoe": 0.8,
+          "MpCost": 0,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10003,
+          "SkillName": "武士普攻",
+          "Description": "武士普攻",
+          "AtkCoe": 1.2,
+          "MpCost": 0,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10004,
+          "SkillName": "文人普攻",
+          "Description": "文人普攻",
+          "AtkCoe": 0.5,
+          "MpCost": 0,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10005,
+          "SkillName": "异人普攻",
+          "Description": "异人普攻",
+          "AtkCoe": 1,
+          "MpCost": 0,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10006,
+          "SkillName": "舍命一击",
+          "Description": "消耗己方血量的百分比加成的高额物伤",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10007,
+          "SkillName": "苞苴公行",
+          "Description": "对敌方单体使用,用钱财贿赂敌方，使敌方受贿3个回合，若敌方主将战败，副将将变成己方单位 ",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10008,
+          "SkillName": "力劈华山",
+          "Description": "对敌方使用,对敌方单人收到当前气血比例伤害和精力30%伤害",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10009,
+          "SkillName": "气冲斗牛",
+          "Description": "对己方使用,令己方3人处于”斗”状态,提升一定的物伤和法伤",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 4,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10010,
+          "SkillName": "固若金汤",
+          "Description": "对己方使用,令己方3人处于”固”状态,提升一定的物抗和法抗",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 4,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10011,
+          "SkillName": "画地为牢",
+          "Description": "对敌方使用,对敌方3人处于”围”,除金蝉脱壳外,不能使用任何技能和攻击",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 2,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10012,
+          "SkillName": "趁火打劫",
+          "Description": "对敌方使用,对敌方1人处于”乱”,该状态下单位不可控制自己行动,一定几率攻击己方",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 2,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10013,
+          "SkillName": "四面楚歌",
+          "Description": "对敌方使用,对敌方1人处于”封”,该状态下单位不可控制自己行动",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10014,
+          "SkillName": "妙手回春",
+          "Description": "对己方使用,令己方3人处于”血”,每回合持续回复气血,持续3回合",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 4,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10015,
+          "SkillName": "金蝉脱壳",
+          "Description": "对己方使用,有几率令己方单位从计策状态恢复正常",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 3,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10016,
+          "SkillName": "釜底抽薪",
+          "Description": "对敌方使用,令敌方4人去除增益状态,”血,斗,固,速,精”",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 2,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10017,
+          "SkillName": "妖火燎原",
+          "Description": "对敌方使用,使敌方3人收到火属性伤害",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 2,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10018,
+          "SkillName": "乘风破浪",
+          "Description": "对敌方使用,使敌方3人收到风属性伤害",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 2,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10019,
+          "SkillName": "凌波微步",
+          "Description": "对己方使用,令己方3人处于速,提升一定速度,持续5回合",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 5,
+          "SelectType": 4,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10020,
+          "SkillName": "巫蛊极毒",
+          "Description": "对敌方使用,令敌方3人处于”毒”,持续5回合,每回合造成上回合50%伤害",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 5,
+          "SelectType": 2,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10021,
+          "SkillName": "命归术",
+          "Description": "对己方使用,回复全体50%的气血",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10022,
+          "SkillName": "玉清诀",
+          "Description": "对己方使用,回复全体50%的精力",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10023,
+          "SkillName": "破血狂攻",
+          "Description": "对敌方单体使用,造成2倍物理伤害的物理攻击",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10024,
+          "SkillName": "琴音三叠",
+          "Description": "对敌方单体使用,造成2倍法术伤害的法术攻击",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10025,
+          "SkillName": "玉石俱焚",
+          "Description": "对敌方单体使用,造成自身等比例血量的伤害",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10026,
+          "SkillName": "幻影剑舞",
+          "Description": "对敌方单体使用,造成自身速度*5的物理伤害",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 1,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10027,
+          "SkillName": "野兽之力",
+          "Description": "对己发使用,使己方单体提高%15物理伤害和法术伤害3个回合",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10028,
+          "SkillName": "魔兽之印",
+          "Description": "对己发使用,使己方全体提高%10物理伤害和法术伤害3个回合",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10029,
+          "SkillName": "流云诀",
+          "Description": "对己方使用,使己方单体提高10%速度,持续3回合",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 1,
+          "SelectCount": 1
+        },
+        {
+          "SkillId": 10030,
+          "SkillName": "啸风诀",
+          "Description": "对己方使用,使己方全体提高5%速度,持续3回合",
+          "AtkCoe": 1,
+          "MpCost": 10,
+          "RoundCount": 3,
+          "SelectType": 1,
+          "SelectCount": 1
+        }
+      ]
+}

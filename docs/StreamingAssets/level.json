@@ -1,0 +1,124 @@
+{
+    "Sheet1": [
+        {
+            "id": 1,
+            "needExp": 5,
+            "blood": 100
+        },
+        {
+            "id": 2,
+            "needExp": 30,
+            "blood": 330
+        },
+        {
+            "id": 3,
+            "needExp": 80,
+            "blood": 360
+        },
+        {
+            "id": 4,
+            "needExp": 150,
+            "blood": 390
+        },
+        {
+            "id": 5,
+            "needExp": 320,
+            "blood": 420
+        },
+        {
+            "id": 6,
+            "needExp": 800,
+            "blood": 480
+        },
+        {
+            "id": 7,
+            "needExp": 1800,
+            "blood": 540
+        },
+        {
+            "id": 8,
+            "needExp": 4000,
+            "blood": 600
+        },
+        {
+            "id": 9,
+            "needExp": 8000,
+            "blood": 660
+        },
+        {
+            "id": 10,
+            "needExp": 15000,
+            "blood": 780
+        },
+        {
+            "id": 11,
+            "needExp": 30000,
+            "blood": 900
+        },
+        {
+            "id": 12,
+            "needExp": 45000,
+            "blood": 1050
+        },
+        {
+            "id": 13,
+            "needExp": 80000,
+            "blood": 1200
+        },
+        {
+            "id": 14,
+            "needExp": 130000,
+            "blood": 1350
+        },
+        {
+            "id": 15,
+            "needExp": 150000,
+            "blood": 1500
+        },
+        {
+            "id": 16,
+            "needExp": 200000,
+            "blood": 1550
+        },
+        {
+            "id": 17,
+            "needExp": 250000,
+            "blood": 1600
+        },
+        {
+            "id": 18,
+            "needExp": 300000,
+            "blood": 1650
+        },
+        {
+            "id": 19,
+            "needExp": 350000,
+            "blood": 1700
+        },
+        {
+            "id": 20,
+            "needExp": 400000,
+            "blood": 1750
+        },
+        {
+            "id": 21,
+            "needExp": 500000,
+            "blood": 1800
+        },
+        {
+            "id": 22,
+            "needExp": 600000,
+            "blood": 1850
+        },
+        {
+            "id": 23,
+            "needExp": 700000,
+            "blood": 1900
+        },
+        {
+            "id": 24,
+            "needExp": 800000,
+            "blood": 1950
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "Sheet1": [
+        {
+            "SodierLv": 1,
+            "ConsumablesNum": 1,
+            "GoldNum": 50
+        },
+        {
+            "SodierLv": 2,
+            "ConsumablesNum": 2,
+            "GoldNum": 100
+        },
+        {
+            "SodierLv": 3,
+            "ConsumablesNum": 4,
+            "GoldNum": 200
+        },
+        {
+            "SodierLv": 4,
+            "ConsumablesNum": 6,
+            "GoldNum": 300
+        },
+        {
+            "SodierLv": 5,
+            "ConsumablesNum": 8,
+            "GoldNum": 400
+        },
+        {
+            "SodierLv": 6,
+            "ConsumablesNum": 10,
+            "GoldNum": 500
+        },
+        {
+            "SodierLv": 7,
+            "ConsumablesNum": 14,
+            "GoldNum": 600
+        },
+        {
+            "SodierLv": 8,
+            "ConsumablesNum": 18,
+            "GoldNum": 700
+        },
+        {
+            "SodierLv": 9,
+            "ConsumablesNum": 22,
+            "GoldNum": 800
+        },
+        {
+            "SodierLv": 10,
+            "ConsumablesNum": 30,
+            "GoldNum": 1000
+        }
+    ]
+}
