@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     private List<PlayerController> playerCtrls = new List<PlayerController>();
     private string curRoundPlayerId = null;
     private Text curRoundText;
+    private bool isGaming = false;
     void Awake()
     {
         leftSeats = GameObject.Find("GameRoot/LeftSeats");
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour
     async void Start()
     {
         await ConfigData.LoadConfigsAsync();
+        isGaming = true;
         var newPlayerPrefab = Resources.Load<GameObject>("Prefabs/Player");
         for (int i = 0; i < leftSeatsTrans.Length; i++)
         {
@@ -86,6 +88,7 @@ public class GameController : MonoBehaviour
         }
         if (rightPlayerLive && leftPlayerLive == false)
         {
+            isGaming = false;
             //玩家胜利
             // Tools.ShowTip("游戏胜利");
             int nextNeedExp = GameData.Instance.UpPlayer(10);
@@ -98,9 +101,12 @@ public class GameController : MonoBehaviour
             {
                 SceneManager.LoadScene("Arcade");
             });
+
         }
         if (rightPlayerLive == false && leftPlayerLive == true)
         {
+            isGaming = false;
+
             Tools.ShowConfirm("游戏失败", () =>
             {
                 SceneManager.LoadScene("Arcade");
@@ -155,6 +161,7 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
+        if (isGaming == false) return;
         if (curRoundPlayerId == null) return;
         // 检查鼠标左键是否被按下
         if (Input.GetMouseButtonDown(0) && players.Find(ele => ele.uuid == curRoundPlayerId).soldierId == "1000")
