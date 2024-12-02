@@ -59,6 +59,10 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         player.hp -= damage;
+        if (player.sodierName == "主将")
+        {
+            PlayerData.SetInt(PlayerData.Hp, player.hp);
+        }
         if (player.hp <= 0)
         {
             player.hp = 0;
