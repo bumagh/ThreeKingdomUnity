@@ -118,7 +118,7 @@ public class GameController : MonoBehaviour
         if (rightPlayerLive == false && leftPlayerLive == true)
         {
             isGaming = false;
-
+            
             Tools.ShowConfirm("游戏失败", () =>
             {
                 SceneManager.LoadScene("Arcade");
