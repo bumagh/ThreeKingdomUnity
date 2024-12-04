@@ -24,6 +24,8 @@ public class CenterBtnController : MonoBehaviour
             facilityBtn.GetComponent<Image>().color = Color.white;
             mapBtn.GetComponent<Image>().color = Color.white;
             funcBtn.GetComponent<Image>().color = Color.white;
+            EventManager.DispatchEvent<CenterBtnEnums>(EventName.TopPanelUpdate, CenterBtnEnums.PersonItems);
+
         });
         facilityBtn.onClick.AddListener(() =>
        {
@@ -31,9 +33,11 @@ public class CenterBtnController : MonoBehaviour
            facilityBtn.GetComponent<Image>().color = Color.gray;
            mapBtn.GetComponent<Image>().color = Color.white;
            funcBtn.GetComponent<Image>().color = Color.white;
+           EventManager.DispatchEvent<CenterBtnEnums>(EventName.TopPanelUpdate, CenterBtnEnums.FacilityItems);
        });
         mapBtn.onClick.AddListener(() =>
        {
+           EventManager.DispatchEvent<CenterBtnEnums>(EventName.TopPanelUpdate, CenterBtnEnums.MapItems);
            personBtn.GetComponent<Image>().color = Color.white;
            facilityBtn.GetComponent<Image>().color = Color.white;
            mapBtn.GetComponent<Image>().color = Color.gray;
@@ -41,6 +45,7 @@ public class CenterBtnController : MonoBehaviour
        });
         funcBtn.onClick.AddListener(() =>
        {
+           EventManager.DispatchEvent<CenterBtnEnums>(EventName.TopPanelUpdate, CenterBtnEnums.FuncItems);
            personBtn.GetComponent<Image>().color = Color.white;
            facilityBtn.GetComponent<Image>().color = Color.white;
            mapBtn.GetComponent<Image>().color = Color.white;
