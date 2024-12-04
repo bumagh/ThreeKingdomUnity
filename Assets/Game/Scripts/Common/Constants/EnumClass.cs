@@ -340,3 +340,19 @@ public enum HeroQuality
     A = 3,
     S = 4
 }
+public enum CenterBtnEnums
+{
+    /// <summary>
+    /// 未指定
+    /// </summary>
+    PersonItems = 0,
+    /// <summary>
+    /// 地图上方的回合(左上0,0 右下4,5)
+    /// </summary>
+    FacilityItems = 1,
+    /// <summary>
+    /// 地图下方的回合(左上0,6,右下4,11)
+    /// </summary>
+    MapItems = 2,
+    FuncItems = 3
+}

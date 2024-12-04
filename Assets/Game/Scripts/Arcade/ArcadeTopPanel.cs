@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +15,11 @@ public class ArcadeTopPanel : MonoBehaviour
     private Text hpText;
     private Text mpText;
 
+    private GameObject rightInfo;
+    private GameObject personItems;
+    private GameObject facilityItems;
+    private GameObject mapItems;
+    private GameObject funcItems;
     void Awake()
     {
         nameText = transform.Find("LeftInfo/AttrValue/Name").GetComponent<Text>();
@@ -32,9 +38,49 @@ public class ArcadeTopPanel : MonoBehaviour
         jobText.text = PlayerData.GetString(PlayerData.Job, "武士");
         hpText.text = PlayerData.GetInt(PlayerData.Hp, 100).ToString();
         mpText.text = PlayerData.GetInt(PlayerData.Mp, 100).ToString();
+        rightInfo = transform.Find("RightInfo").gameObject;
+        personItems = transform.Find("RightInfo/PersonItems").gameObject;
+        facilityItems = transform.Find("RightInfo/FacilityItems").gameObject;
+        mapItems = transform.Find("RightInfo/MapItems").gameObject;
+        funcItems = transform.Find("RightInfo/FuncItems").gameObject;
         EventManager.AddEvent<bool>(EventName.ShowHomePanel, this.ShowHomePanel);
+        EventManager.AddEvent<CenterBtnEnums>(EventName.TopPanelUpdate, this.TopPanelUpdate);
 
     }
+
+    private void TopPanelUpdate(CenterBtnEnums enums)
+    {
+        switch (enums)
+        {
+            case CenterBtnEnums.PersonItems:
+                personItems.SetActive(true);
+                facilityItems.SetActive(false);
+                mapItems.SetActive(false);
+                funcItems.SetActive(false);
+                break;
+            case CenterBtnEnums.FacilityItems:
+                personItems.SetActive(false);
+                facilityItems.SetActive(true);
+                mapItems.SetActive(false);
+                funcItems.SetActive(false);
+                break;
+            case CenterBtnEnums.MapItems:
+                personItems.SetActive(false);
+                facilityItems.SetActive(false);
+                mapItems.SetActive(true);
+                funcItems.SetActive(false);
+                break;
+            case CenterBtnEnums.FuncItems:
+                personItems.SetActive(false);
+                facilityItems.SetActive(false);
+                mapItems.SetActive(false);
+                funcItems.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
+
     private void ShowHomePanel(bool show)
     {
         if (show)
@@ -50,6 +96,7 @@ public class ArcadeTopPanel : MonoBehaviour
     void OnDestroy()
     {
         EventManager.RemoveEvent<bool>(EventName.ShowHomePanel, this.ShowHomePanel);
+        EventManager.RemoveEvent<CenterBtnEnums>(EventName.TopPanelUpdate, this.TopPanelUpdate);
 
     }
 }

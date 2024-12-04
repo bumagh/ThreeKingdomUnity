@@ -30,7 +30,7 @@ public class ArcadeController : MonoBehaviour
         PlayerData.SetString(PlayerData.CurMap, "新手村");
 
         mapStrText.text = PlayerData.GetString(PlayerData.CurMap, "新手村");
-
+        EventManager.DispatchEvent<CenterBtnEnums>(EventName.TopPanelUpdate,CenterBtnEnums.PersonItems);
 
     }
 

@@ -13,5 +13,6 @@ public class EventName
     public const int SetGamingState = 10003;
     public const int ShowHomePanel = 10004;
     public const int ShowHospitalPanel = 10005;
+    public const int TopPanelUpdate = 10006;
     
 }

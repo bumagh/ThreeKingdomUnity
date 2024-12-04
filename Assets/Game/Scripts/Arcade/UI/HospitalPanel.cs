@@ -20,6 +20,7 @@ public class HospitalPanel : MonoBehaviour
             int curLevel = PlayerData.GetInt(PlayerData.Level, 1);
             int levelHp = ConfigData.levels.Find(ele => ele.id == curLevel).blood;
             PlayerData.SetInt(PlayerData.Hp, levelHp);
+            Tools.ShowTip("一键治疗成功,生命值和精力值恢复成功");
             //TODO:MP
         });
 
