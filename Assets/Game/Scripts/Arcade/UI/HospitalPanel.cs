@@ -41,8 +41,9 @@ public class HospitalPanel : MonoBehaviour
             else
             {
                 GameData.Instance.UseItemByCount(1001, 1);
-                PlayerData.SetInt(PlayerData.Coin, PlayerData.GetInt(PlayerData.Coin,100) - 1);
+                PlayerData.SetInt(PlayerData.Coin, PlayerData.GetInt(PlayerData.Coin, 100) - 1);
                 Tools.ShowTip("购买回命丹成功,金币-1");
+                GameData.Instance.AddItemToKnapsack(1004, 1);
             }
         });
     }

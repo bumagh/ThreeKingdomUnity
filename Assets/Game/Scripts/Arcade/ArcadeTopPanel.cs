@@ -49,7 +49,9 @@ public class ArcadeTopPanel : MonoBehaviour
 
         bagBtn.onClick.AddListener(() =>
         {
-            Tools.ShowTip("功能开发中");
+            EventManager.DispatchEvent<bool>(EventName.ShowBagPanel, true);
+            EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
+
         });
         rankBtn.onClick.AddListener(() =>
         {

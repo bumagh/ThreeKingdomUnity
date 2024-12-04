@@ -11,7 +11,7 @@ public class GameData : MonoSingleton<GameData>
     private readonly Dictionary<string, int> soldierDict = new Dictionary<string, int>();
     private readonly string[] battleSoldiers = new string[10];
     private readonly Dictionary<int, string> soldierUpDict = new Dictionary<int, string>();
-    private readonly Dictionary<int, int> items = new Dictionary<int, int>();
+    public Dictionary<int, int> items = new Dictionary<int, int>();
 
 
     protected override void Initialize()
@@ -37,8 +37,6 @@ public class GameData : MonoSingleton<GameData>
         }
 
     }
-
-
 
     public string[] GetBattleSoldiers()
     {
