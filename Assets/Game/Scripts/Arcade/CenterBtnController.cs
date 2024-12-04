@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class CenterBtnController : MonoBehaviour
     private Button funcBtn;
     void Awake()
     {
+        EventManager.AddEvent<bool>(EventName.ShowHomePanel, this.ShowHomePanel);
         personBtn = transform.Find("PersonBtn").GetComponent<Button>();
         facilityBtn = transform.Find("FacilityBtn").GetComponent<Button>();
         mapBtn = transform.Find("MapBtn").GetComponent<Button>();
@@ -44,5 +46,23 @@ public class CenterBtnController : MonoBehaviour
            mapBtn.GetComponent<Image>().color = Color.white;
            funcBtn.GetComponent<Image>().color = Color.gray;
        });
+    }
+
+    private void ShowHomePanel(bool show)
+    {
+        if (show)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else
+        {
+            transform.localScale = Vector3.zero;
+
+        }
+    }
+    void OnDestroy()
+    {
+        EventManager.RemoveEvent<bool>(EventName.ShowHomePanel, this.ShowHomePanel);
+
     }
 }

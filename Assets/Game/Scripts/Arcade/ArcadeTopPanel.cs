@@ -32,6 +32,24 @@ public class ArcadeTopPanel : MonoBehaviour
         jobText.text = PlayerData.GetString(PlayerData.Job, "武士");
         hpText.text = PlayerData.GetInt(PlayerData.Hp, 100).ToString();
         mpText.text = PlayerData.GetInt(PlayerData.Mp, 100).ToString();
+        EventManager.AddEvent<bool>(EventName.ShowHomePanel, this.ShowHomePanel);
+
+    }
+    private void ShowHomePanel(bool show)
+    {
+        if (show)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else
+        {
+            transform.localScale = Vector3.zero;
+
+        }
+    }
+    void OnDestroy()
+    {
+        EventManager.RemoveEvent<bool>(EventName.ShowHomePanel, this.ShowHomePanel);
 
     }
 }

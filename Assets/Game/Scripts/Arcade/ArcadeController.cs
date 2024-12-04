@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,13 +22,21 @@ public class ArcadeController : MonoBehaviour
         });
         hospitalBtn.onClick.AddListener(() =>
               {
-
+                EventManager.DispatchEvent<bool>(EventName.ShowHospitalPanel,true);
+                EventManager.DispatchEvent<bool>(EventName.ShowHomePanel,false);
               });
 
 
-        PlayerData.SetString(PlayerData.CurMap, "村口");
+        PlayerData.SetString(PlayerData.CurMap, "新手村");
 
         mapStrText.text = PlayerData.GetString(PlayerData.CurMap, "新手村");
 
+
+    }
+
+
+    async void Start()
+    {
+        await ConfigData.LoadConfigsAsync();
     }
 }

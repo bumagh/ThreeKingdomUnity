@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     private string curRoundPlayerId = null;
     private Text curRoundText;
     private bool isGaming = false;
+
     void Awake()
     {
         leftSeats = GameObject.Find("GameRoot/LeftSeats");
