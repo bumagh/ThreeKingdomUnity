@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
             var playerController = newPlayerGo.GetComponent<PlayerController>();
             if (i == 0)
             {
-                playerController.Init("主将", PlayerData.GetInt(PlayerData.Hp,100), 10, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
+                playerController.Init("主将", PlayerData.GetInt(PlayerData.Hp, 100), 10, 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
                 playerController.isLeft = false;
                 players.Add(playerController.player);
                 playerCtrls.Add(playerController);
@@ -85,6 +85,7 @@ public class GameController : MonoBehaviour
 
     private void SetNextRoundPlayerId()
     {
+        if (isGaming == false) return;
         //判断是否胜利或失败
         bool leftPlayerLive = false;
         bool rightPlayerLive = false;
@@ -119,7 +120,7 @@ public class GameController : MonoBehaviour
         if (rightPlayerLive == false && leftPlayerLive == true)
         {
             isGaming = false;
-            
+
             Tools.ShowConfirm("游戏失败", () =>
             {
                 SceneManager.LoadScene("Arcade");

@@ -27,3 +27,7 @@ ThreeKingdomUnity
 - 多人聊天
 - 多人对战
 - 交易系统
+
+
+# bug
+- [x] confirmPanel弹出多次
