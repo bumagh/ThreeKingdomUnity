@@ -34,14 +34,14 @@ public class HospitalPanel : MonoBehaviour
         item1Btn.onClick.AddListener(() =>
         {
             //判断当前金币是否大于一
-            if (PlayerData.GetInt(PlayerData.Coin, 0) < 1)
+            if (PlayerData.GetInt(PlayerData.Coin, 100) < 1)
             {
                 Tools.ShowTip("金币为0,购买失败");
             }
             else
             {
                 GameData.Instance.UseItemByCount(1001, 1);
-                PlayerData.SetInt(PlayerData.Coin, PlayerData.GetInt(PlayerData.Coin) - 1);
+                PlayerData.SetInt(PlayerData.Coin, PlayerData.GetInt(PlayerData.Coin,100) - 1);
                 Tools.ShowTip("购买回命丹成功,金币-1");
             }
         });
