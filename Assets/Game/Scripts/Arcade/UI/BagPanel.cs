@@ -40,6 +40,7 @@ public class BagPanel : MonoBehaviour
             {
                 var goodsItem = ConfigData.goods.Find(ele => ele.GoodsID == item.Key);
                 if (goodsItem == null) return;
+                if (item.Value <= 0) return;
                 if (goodsItem.GoodsTypeId != 1)
                 {
                     var go = GameObject.Instantiate(prefab, transform.Find("Panel/Content"));

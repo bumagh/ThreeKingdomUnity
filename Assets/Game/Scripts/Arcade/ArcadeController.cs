@@ -18,19 +18,28 @@ public class ArcadeController : MonoBehaviour
 
         fightBtn.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("Game");
+            if (PlayerData.GetInt(PlayerData.Hp, 1) <= 1)
+            {
+                Tools.ShowConfirm("当前血量值过低,是否继续战斗?", () =>
+                {
+                    SceneManager.LoadScene("Game");
+                });
+            }
+            else
+
+                SceneManager.LoadScene("Game");
         });
         hospitalBtn.onClick.AddListener(() =>
               {
-                EventManager.DispatchEvent<bool>(EventName.ShowHospitalPanel,true);
-                EventManager.DispatchEvent<bool>(EventName.ShowHomePanel,false);
+                  EventManager.DispatchEvent<bool>(EventName.ShowHospitalPanel, true);
+                  EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
               });
 
 
         PlayerData.SetString(PlayerData.CurMap, "新手村");
 
         mapStrText.text = PlayerData.GetString(PlayerData.CurMap, "新手村");
-        EventManager.DispatchEvent<CenterBtnEnums>(EventName.TopPanelUpdate,CenterBtnEnums.PersonItems);
+        EventManager.DispatchEvent<CenterBtnEnums>(EventName.TopPanelUpdate, CenterBtnEnums.PersonItems);
 
     }
 
