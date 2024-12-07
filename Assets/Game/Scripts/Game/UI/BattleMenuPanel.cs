@@ -24,6 +24,7 @@ public class BattleMenuPanel : MonoBehaviour
             panel.SetActive(false);
             cancelBtn.gameObject.SetActive(true);
             menuTipText.text = "请选择需要攻击的敌人";
+            EventManager.DispatchEvent<bool>(EventName.SetLocalBattleState, true);
         });
 
         runBtn.onClick.AddListener(() =>

@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     private TextMeshPro speedTmp;
     public Player player = new Player();
+    public bool isSelectTarget = false;
     public bool isLeft = true;
     public GameObject target;           // 被攻击的目标
     public float moveSpeed = 15f;        // 移动速度
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
         player.hp -= damage;
         if (player.sodierName == "主将")
         {
-            PlayerData.SetInt(PlayerData.Hp, Math.Max(player.hp,1));
+            PlayerData.SetInt(PlayerData.Hp, Math.Max(player.hp, 1));
         }
         if (player.hp <= 0)
         {

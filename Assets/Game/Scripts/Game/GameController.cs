@@ -33,11 +33,26 @@ public class GameController : MonoBehaviour
         }
         EventManager.AddEvent(EventName.SetNextRoundPlayerId, this.SetNextRoundPlayerId);
         EventManager.AddEvent(EventName.SetGamingState, this.SetGamingState);
+        EventManager.AddEvent<bool>(EventName.SetLocalBattleState, this.SetLocalBattleState);
+
+
     }
+
+    private void SetLocalBattleState(bool state)
+    {
+        var localPlayerCtrl = playerCtrls.Find(ele => ele.player.sodierName == "主将");
+        if (localPlayerCtrl != null)
+        {
+            localPlayerCtrl.isSelectTarget = state;
+        }
+    }
+
     void OnDestroy()
     {
         EventManager.RemoveEvent(EventName.SetNextRoundPlayerId, this.SetNextRoundPlayerId);
         EventManager.RemoveEvent(EventName.SetGamingState, this.SetGamingState);
+        EventManager.RemoveEvent<bool>(EventName.SetLocalBattleState, this.SetLocalBattleState);
+
     }
     private void SetGamingState()
     {
@@ -177,6 +192,7 @@ public class GameController : MonoBehaviour
     {
         if (isGaming == false) return;
         if (curRoundPlayerId == null) return;
+        if (playerCtrls.Find(ele => ele.player.sodierName == "主将").isSelectTarget == false) return;
         // 检查鼠标左键是否被按下
         if (Input.GetMouseButtonDown(0) && players.Find(ele => ele.uuid == curRoundPlayerId).soldierId == "1000")
         {
@@ -196,6 +212,7 @@ public class GameController : MonoBehaviour
                 playerCtrls.Find(ele => ele.player.uuid == curRoundPlayerId).target = hit.collider.gameObject;
                 // 在此处添加点击后的处理逻辑
             }
+            SetLocalBattleState(false);
         }
     }
 

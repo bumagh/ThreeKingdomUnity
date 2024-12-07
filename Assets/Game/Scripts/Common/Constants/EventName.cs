@@ -15,5 +15,6 @@ public class EventName
     public const int ShowHospitalPanel = 10005;
     public const int TopPanelUpdate = 10006;
     public const int ShowBagPanel = 10007;
+    public const int SetLocalBattleState = 10008;
     
 }
