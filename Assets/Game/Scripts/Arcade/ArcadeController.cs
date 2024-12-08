@@ -12,9 +12,9 @@ public class ArcadeController : MonoBehaviour
 
     void Awake()
     {
-        fightBtn = GameObject.Find("Canvas/TopPanel/RightInfo/PersonItems/PersonItem/Button").GetComponent<Button>();
-        mapStrText = GameObject.Find("Canvas/TopMapStr").GetComponent<Text>();
-        hospitalBtn = GameObject.Find("Canvas/TopPanel/RightInfo/FacilityItems/HospitalBtn").GetComponent<Button>();
+        fightBtn = GameObject.Find("Canvas/HomePanel/TopPanel/RightInfo/PersonItems/PersonItem/Button").GetComponent<Button>();
+        mapStrText = GameObject.Find("Canvas/HomePanel/TopPanel/TopMapStr").GetComponent<Text>();
+        hospitalBtn = GameObject.Find("Canvas/HomePanel/TopPanel/RightInfo/FacilityItems/HospitalBtn").GetComponent<Button>();
 
         fightBtn.onClick.AddListener(() =>
         {
