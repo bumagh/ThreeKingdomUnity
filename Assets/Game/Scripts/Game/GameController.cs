@@ -216,5 +216,9 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private void UpdatePlayer(string id)
+    {
+        curRoundText.text = "当前回合:" + ConfigData.soldiers.Find(ele => ele.SoldierId == id).SodierName;
+    }
 
 }

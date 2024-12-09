@@ -33,11 +33,24 @@ public class PlayerController : MonoBehaviour
         hpTmp = transform.Find("HpTextTmp").GetComponent<TextMeshPro>();
         atkTmp = transform.Find("AtkTextTmp").GetComponent<TextMeshPro>();
         speedTmp = transform.Find("SpeedTextTmp").GetComponent<TextMeshPro>();
+        EventManager.AddEvent(EventName.UpdateHpUI, this.UpdateHpUI);
+
     }
     void Start()
     {
         // 记录原始位置
         originalPosition = transform.position;
+    }
+    public void UpdateHpUI()
+    {
+        if (player.hp > 0)
+        {
+            player.hp = PlayerData.GetInt(PlayerData.Hp, 1);
+            hpTmp.text = "hp:" + player.hp;
+        }
+        else
+            hpTmp.text = "已阵亡";
+
     }
     public void Init(string name, int hp, int atk, int speed, Soldier soldier)
     {
@@ -143,5 +156,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         // 开始返回
         isReturning = true;
+    }
+
+    void OnDestroy()
+    {
+        EventManager.RemoveEvent(EventName.UpdateHpUI, this.UpdateHpUI);
+
     }
 }

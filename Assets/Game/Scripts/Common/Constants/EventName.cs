@@ -16,5 +16,8 @@ public class EventName
     public const int TopPanelUpdate = 10006;
     public const int ShowBagPanel = 10007;
     public const int SetLocalBattleState = 10008;
+    public const int ShowUsePanel = 10009;
+    public const int UpdateHpUI = 100010;
+
     
 }

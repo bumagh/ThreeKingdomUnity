@@ -8,6 +8,7 @@ public class BattleMenuPanel : MonoBehaviour
 {
     private GameObject panel;
     private Button atkBtn;
+    private Button useBtn;
     private Button runBtn;
     private Text menuTipText;
     private Button cancelBtn;
@@ -15,6 +16,7 @@ public class BattleMenuPanel : MonoBehaviour
     {
         panel = transform.Find("Panel").gameObject;
         atkBtn = transform.Find("Panel/AtkBtn").GetComponent<Button>();
+        useBtn = transform.Find("Panel/UseBtn").GetComponent<Button>();
         runBtn = transform.Find("Panel/RunBtn").GetComponent<Button>();
         cancelBtn = transform.Find("CancelBtn").GetComponent<Button>();
         menuTipText = transform.Find("MenuTip").GetComponent<Text>();
@@ -26,7 +28,12 @@ public class BattleMenuPanel : MonoBehaviour
             menuTipText.text = "请选择需要攻击的敌人";
             EventManager.DispatchEvent<bool>(EventName.SetLocalBattleState, true);
         });
-
+        useBtn.onClick.AddListener(() =>
+            {
+                panel.SetActive(false);
+                menuTipText.text = "请选择要使用的物品";
+                EventManager.DispatchEvent<bool>(EventName.ShowUsePanel, true);
+            });
         runBtn.onClick.AddListener(() =>
      {
          //TODO:增加逃跑概率
@@ -52,6 +59,10 @@ public class BattleMenuPanel : MonoBehaviour
         panel.SetActive(show);
         cancelBtn.gameObject.SetActive(false);
         menuTipText.gameObject.SetActive(show);
+        if (show)
+        {
+            menuTipText.text = "";
+        }
     }
 
     void OnDestroy()
