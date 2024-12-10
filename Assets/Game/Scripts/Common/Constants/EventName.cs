@@ -18,6 +18,7 @@ public class EventName
     public const int SetLocalBattleState = 10008;
     public const int ShowUsePanel = 10009;
     public const int UpdateHpUI = 100010;
+    public const int ShowBankPanel = 100011;
 
-    
+
 }

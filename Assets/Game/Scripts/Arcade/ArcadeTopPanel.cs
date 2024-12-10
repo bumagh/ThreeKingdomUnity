@@ -68,7 +68,8 @@ public class ArcadeTopPanel : MonoBehaviour
 
         bankBtn.onClick.AddListener(() =>
         {
-            Tools.ShowTip("功能开发中");
+            EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
+            EventManager.DispatchEvent<bool>(EventName.ShowBankPanel, true);
         });
 
         soldierBtn.onClick.AddListener(() =>
