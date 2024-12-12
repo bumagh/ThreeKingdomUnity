@@ -25,6 +25,7 @@ public class ArcadeTopPanel : MonoBehaviour
     private Button shopBtn;
     private Button exitBtn;
     private Button bankBtn;
+    private Button equipBtn;
     private Button soldierBtn;
 
 
@@ -45,6 +46,7 @@ public class ArcadeTopPanel : MonoBehaviour
         exitBtn = transform.Find("RightInfo/FuncItems/ExitBtn").GetComponent<Button>();
 
         bankBtn = transform.Find("RightInfo/FacilityItems/BankBtn").GetComponent<Button>();
+        equipBtn = transform.Find("RightInfo/FacilityItems/EquipBtn").GetComponent<Button>();
         soldierBtn = transform.Find("RightInfo/FacilityItems/SoldierBtn").GetComponent<Button>();
 
         bagBtn.onClick.AddListener(() =>
@@ -71,7 +73,11 @@ public class ArcadeTopPanel : MonoBehaviour
             EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
             EventManager.DispatchEvent<bool>(EventName.ShowBankPanel, true);
         });
-
+        equipBtn.onClick.AddListener(() =>
+               {
+                   EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
+                   EventManager.DispatchEvent<bool>(EventName.ShowEquipPanel, true);
+               });
         soldierBtn.onClick.AddListener(() =>
         {
             Tools.ShowTip("功能开发中");
