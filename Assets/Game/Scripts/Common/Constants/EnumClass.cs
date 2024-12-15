@@ -8,7 +8,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine; 
+using UnityEngine;
 
 /// <summary>
 /// 常用枚举类
@@ -203,15 +203,15 @@ public enum BattleType
     /// <summary>
     /// 无
     /// </summary>
-    None=0,
+    None = 0,
     /// <summary>
     /// 推关卡打怪
     /// </summary>
-    PvE=1,
+    PvE = 1,
     /// <summary>
     /// 玩家竞技
     /// </summary>
-    PvP=2,
+    PvP = 2,
     /// <summary>
     /// 引导模式
     /// </summary>
@@ -355,4 +355,13 @@ public enum CenterBtnEnums
     /// </summary>
     MapItems = 2,
     FuncItems = 3
+}
+public enum EquipTypeEnums
+{
+    Helmet = 1,
+    Weapon = 2,
+    Boots = 3,
+    Armor = 4,
+    Necklace = 5,
+    Wristband = 6,
 }

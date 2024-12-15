@@ -1,5 +1,6 @@
 
 using System;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,12 +10,8 @@ public class EquipPanel : MonoBehaviour
 {
     private GameObject panel;
     private Button backBtn;
-    private Button helmetBtn;
-    private Button weaponBtn;
-    private Button bootsBtn;
-    private Button armorBtn;
-    private Button necklaceBtn;
-    private Button wristbandBtn;
+    private Button[] equipBtns = new Button[6];
+    private string[] equipStrs = new string[] { "Helmet", "Weapon", "Boots", "Armor", "Necklace", "Wristband" };
     private Transform detailTrans;
     private Transform typeTrans;
     void Awake()
@@ -22,12 +19,11 @@ public class EquipPanel : MonoBehaviour
         panel = transform.Find("Panel").gameObject;
         detailTrans = transform.Find("Panel/EquipDetail");
         typeTrans = transform.Find("Panel/EquipTypes");
-        helmetBtn = transform.Find("Panel/EquipTypes/Helmet/Button").GetComponent<Button>();
-        weaponBtn = transform.Find("Panel/EquipTypes/Weapon/Button").GetComponent<Button>();
-        bootsBtn = transform.Find("Panel/EquipTypes/Boots/Button").GetComponent<Button>();
-        armorBtn = transform.Find("Panel/EquipTypes/Armor/Button").GetComponent<Button>();
-        necklaceBtn = transform.Find("Panel/EquipTypes/Necklace/Button").GetComponent<Button>();
-        wristbandBtn = transform.Find("Panel/EquipTypes/Wristband/Button").GetComponent<Button>();
+        for (int i = 0; i < equipStrs.Length; i++)
+        {
+            equipBtns[i] = transform.Find("Panel/EquipTypes/" + equipStrs[i] + "/Button").GetComponent<Button>();
+        }
+
         EventManager.AddEvent<bool>(EventName.ShowEquipPanel, this.ShowEquipPanel);
         backBtn = transform.Find("Panel/BackBtn").GetComponent<Button>();
 
@@ -45,36 +41,50 @@ public class EquipPanel : MonoBehaviour
             }
 
         });
-        weaponBtn.onClick.AddListener(() =>
+
+    }
+    void Start()
+    {
+
+        for (int i = 0; i < equipStrs.Length; i++)
         {
-            typeTrans.gameObject.SetActive(false);
-            detailTrans.gameObject.SetActive(true);
-        });
-        helmetBtn.onClick.AddListener(() =>
-       {
-           typeTrans.gameObject.SetActive(false);
-           detailTrans.gameObject.SetActive(true);
-       });
-        bootsBtn.onClick.AddListener(() =>
-       {
-           typeTrans.gameObject.SetActive(false);
-           detailTrans.gameObject.SetActive(true);
-       });
-        armorBtn.onClick.AddListener(() =>
-       {
-           typeTrans.gameObject.SetActive(false);
-           detailTrans.gameObject.SetActive(true);
-       });
-        necklaceBtn.onClick.AddListener(() =>
-       {
-           typeTrans.gameObject.SetActive(false);
-           detailTrans.gameObject.SetActive(true);
-       });
-        wristbandBtn.onClick.AddListener(() =>
-       {
-           typeTrans.gameObject.SetActive(false);
-           detailTrans.gameObject.SetActive(true);
-       });
+            int index = i;
+            equipBtns[i].onClick.AddListener(() =>
+            {
+                typeTrans.gameObject.SetActive(false);
+                detailTrans.gameObject.SetActive(true);
+                ClearUI();
+                var prefab = Resources.Load<GameObject>("Prefabs/Arcade/GoodsItem");
+                var goodsItem = ConfigData.goods.Find(ele => ele.GoodsTypeId == 6 && ele.GoodsTypeChild == (index + 1));
+                var go = GameObject.Instantiate(prefab, detailTrans);
+                var goodsNameText = go.transform.Find("Name").GetComponent<Text>();
+                var goodsDescText = go.transform.Find("Description").GetComponent<Text>();
+                var goodsCountText = go.transform.Find("Count").GetComponent<Text>();
+                var goodsButton = go.transform.Find("Button").GetComponent<Button>();
+                var goodsButtonText = go.transform.Find("Button/Text").GetComponent<Text>();
+                goodsButtonText.text = "购买";
+                goodsNameText.text = goodsItem.GoodsName;
+                goodsDescText.text = goodsItem.GoodsDescribed;
+                goodsCountText.text = goodsItem.Price.ToString() + "金币";
+                goodsButton.onClick.AddListener(() =>
+                {
+                    // if (goodsItem.GoodsID == 1004)
+                    // {
+                    //     Tools.ShowTip("使用成功,生命值已恢复满");
+                    //     int curLevel = PlayerData.GetInt(PlayerData.Level, 1);
+                    //     int levelHp = ConfigData.levels.Find(ele => ele.id == curLevel).blood;
+                    //     PlayerData.SetInt(PlayerData.Hp, levelHp);
+                    //     GameData.Instance.UseItemByCount(1004, 1);
+                    //     ShowBagPanel(true);
+                    // }
+                    // else
+                    {
+                        Tools.ShowTip("功能制作中");
+                    }
+                });
+            });
+        }
+
     }
 
     private void ClearUI()
@@ -87,7 +97,11 @@ public class EquipPanel : MonoBehaviour
     }
     private void ShowEquipPanel(bool show)
     {
-        panel.SetActive(show);
+        if (show)
+            panel.transform.localScale = Vector3.one;
+        else
+            panel.transform.localScale = Vector3.zero;
+
     }
     void OnDestroy()
     {

@@ -26,7 +26,6 @@ public class ArcadeController : MonoBehaviour
                 });
             }
             else
-
                 SceneManager.LoadScene("Game");
         });
         hospitalBtn.onClick.AddListener(() =>
