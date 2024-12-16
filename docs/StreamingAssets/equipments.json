@@ -1,0 +1,101 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Iron Helmet",
+        "type": "Helmet",
+        "rarity": "Common",
+        "description": "A basic helmet made of iron.",
+        "stats": {
+          "health": 0,
+          "attack": 0,
+          "defense": 5,
+          "speed": 0,
+          "critChance": 0,
+          "critDamage": 0
+        },
+        "effects": [
+          {
+            "effectType": "IncreaseDefense",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Steel Sword",
+        "type": "Weapon",
+        "rarity": "Uncommon",
+        "description": "A sword forged from steel, increases attack power.",
+        "stats": {
+          "health": 0,
+          "attack": 10,
+          "defense": 0,
+          "speed": 0,
+          "critChance": 5,
+          "critDamage": 0
+        },
+        "effects": [
+          {
+            "effectType": "IncreaseAttack",
+            "value": 10
+          },
+          {
+            "effectType": "IncreaseCritChance",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Silver Boots",
+        "type": "Boots",
+        "rarity": "Rare",
+        "description": "Lightweight boots that increase speed.",
+        "stats": {
+          "health": 0,
+          "attack": 0,
+          "defense": 2,
+          "speed": 10,
+          "critChance": 0,
+          "critDamage": 0
+        },
+        "effects": [
+          {
+            "effectType": "IncreaseSpeed",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Golden Necklace",
+        "type": "Necklace",
+        "rarity": "Epic",
+        "description": "A golden necklace that boosts overall stats.",
+        "stats": {
+          "health": 50,
+          "attack": 5,
+          "defense": 5,
+          "speed": 0,
+          "critChance": 0,
+          "critDamage": 0
+        },
+        "effects": [
+          {
+            "effectType": "IncreaseHealth",
+            "value": 50
+          },
+          {
+            "effectType": "IncreaseAttack",
+            "value": 5
+          },
+          {
+            "effectType": "IncreaseDefense",
+            "value": 5
+          }
+        ]
+      }
+    ]
+  }
+  
