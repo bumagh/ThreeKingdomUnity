@@ -365,3 +365,13 @@ public enum EquipTypeEnums
     Necklace = 5,
     Wristband = 6,
 }
+
+public enum GoodsTypeEnums
+{
+    Balance = 1,
+    GoodsNormal = 2,
+    Medicine = 3,
+    Mounts = 4,
+    Books = 5,
+    Equipment = 6,
+}

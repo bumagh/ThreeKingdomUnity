@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public static class PlayerData
 {
-      public const string LoginTime = "LoginTime";
+    public const string LoginTime = "LoginTime";
     public const string Items = "Items";
+    public const string Equips = "Equips";
     public const string UnLockSoliders = "UnLockSoliders";
     public const string BattleSoldier = "BattleSoldier";
-       public const string EnergyWorld = "EnergyWorld";
-       public const string BgmVolume = "BgmVolume";
+    public const string EnergyWorld = "EnergyWorld";
+    public const string BgmVolume = "BgmVolume";
     public const string EffectVolume = "EffectVolume";
     public const string Language = "Language";
     public const string CurMap = "CurMap";
@@ -18,6 +20,9 @@ public static class PlayerData
     public const string Job = "Job";
     public const string Hp = "Hp";
     public const string Mp = "Mp";
+    public const string Def = "Def";
+    public const string Atk = "Atk";
+    public const string Sp = "Sp";
 
     public static string userId;
 
@@ -59,5 +64,32 @@ public static class PlayerData
     private static string GetKey(string key)
     {
         return $"{userId}-{key}";
+    }
+    public static void UpdateData(string key, int value)
+    {
+        switch (key)
+        {
+            case "HP":
+                PlayerData.SetInt(PlayerData.Hp, PlayerData.GetInt(PlayerData.Hp, 1) + value);
+                break;
+            case "MP":
+                PlayerData.SetInt(PlayerData.Mp, PlayerData.GetInt(PlayerData.Mp, 1) + value);
+
+                break;
+            case "ATK":
+                PlayerData.SetInt(PlayerData.Atk, PlayerData.GetInt(PlayerData.Atk, 1) + value);
+
+                break;
+            case "SP":
+                PlayerData.SetInt(PlayerData.Sp, PlayerData.GetInt(PlayerData.Sp, 1) + value);
+
+                break;
+            case "DEF":
+                PlayerData.SetInt(PlayerData.Def, PlayerData.GetInt(PlayerData.Def, 1) + value);
+
+                break;
+            default:
+                break;
+        }
     }
 }

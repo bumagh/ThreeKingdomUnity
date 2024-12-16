@@ -12,6 +12,7 @@ public class GameData : MonoSingleton<GameData>
     private readonly string[] battleSoldiers = new string[10];
     private readonly Dictionary<int, string> soldierUpDict = new Dictionary<int, string>();
     public Dictionary<int, int> items = new Dictionary<int, int>();
+    public Dictionary<int, Goods> equips = new Dictionary<int, Goods>();
 
 
     protected override void Initialize()
@@ -36,6 +37,7 @@ public class GameData : MonoSingleton<GameData>
             items.Add(int.Parse(array[0]), int.Parse(array[1]));
         }
 
+        PlayerData.SetInt(PlayerData.Atk, 10);
     }
 
     public string[] GetBattleSoldiers()
@@ -159,6 +161,100 @@ public class GameData : MonoSingleton<GameData>
             items[itemId] = count;
         }
         UpdateItems();
+    }
+
+    public void LoadEquip(int equipId)
+    {
+        // 假设有一个从数据库或配置表获取装备的函数
+        Goods equip = ConfigData.goods.Find(ele => ele.GoodsID == equipId);
+        if (equip == null)
+        {
+            Debug.LogError("Invalid Equip ID");
+            return;
+        }
+
+        // 获取装备类型
+        EquipTypeEnums equipType = (EquipTypeEnums)equip.GoodsTypeChild;
+
+        // 如果当前已有装备，先卸下
+        if (equips.ContainsKey((int)equipType))
+        {
+            UnloadEquip(equipType);
+
+        }
+
+        // 装备上该物品
+        equips[(int)equipType] = equip;
+        ApplyEquipStats(equip);
+        Debug.Log($"Equipped {equip.GoodsName} on {equipType}");
+    }
+
+    private void ApplyEquipStats(Goods equip)
+    {
+        if (equip.ParsedStats.ContainsKey("DEF"))
+        {
+            PlayerData.UpdateData("DEF", equip.ParsedStats["DEF"]);
+        }
+        if (equip.ParsedStats.ContainsKey("ATK"))
+        {
+            PlayerData.UpdateData("ATK", equip.ParsedStats["ATK"]);
+
+        }
+        if (equip.ParsedStats.ContainsKey("HP"))
+        {
+            PlayerData.UpdateData("HP", equip.ParsedStats["HP"]);
+        }
+        if (equip.ParsedStats.ContainsKey("MP"))
+        {
+            PlayerData.UpdateData("MP", equip.ParsedStats["MP"]);
+        }
+        if (equip.ParsedStats.ContainsKey("SP"))
+        {
+            PlayerData.UpdateData("SP", equip.ParsedStats["SP"]);
+        }
+    }
+
+
+    private void UnloadEquip(EquipTypeEnums equipType)
+    {
+        if (equips.ContainsKey((int)equipType))
+        {
+            Goods equip = equips[(int)equipType];
+            RemoveEquipStats(equip);
+            equips.Remove((int)equipType);
+            Debug.Log($"Unequipped {equip.GoodsName} from {equipType}");
+            //卸下放入背包
+            AddItemToKnapsack(equip.GoodsID, 1);
+        }
+        else
+        {
+            Debug.Log($"No item equipped on {equipType}");
+        }
+    }
+
+    private void RemoveEquipStats(Goods equip)
+    {
+        if (equip.ParsedStats.ContainsKey("DEF"))
+        {
+            PlayerData.UpdateData("DEF", -equip.ParsedStats["DEF"]);
+        }
+        if (equip.ParsedStats.ContainsKey("ATK"))
+        {
+            PlayerData.UpdateData("ATK", -equip.ParsedStats["ATK"]);
+
+        }
+        if (equip.ParsedStats.ContainsKey("HP"))
+        {
+            PlayerData.UpdateData("HP", -equip.ParsedStats["HP"]);
+        }
+        if (equip.ParsedStats.ContainsKey("MP"))
+        {
+            PlayerData.UpdateData("MP", -equip.ParsedStats["MP"]);
+        }
+        if (equip.ParsedStats.ContainsKey("SP"))
+        {
+            PlayerData.UpdateData("SP", -equip.ParsedStats["SP"]);
+        }
     }
 
     public void UseItemByCount(int itemId, int count)

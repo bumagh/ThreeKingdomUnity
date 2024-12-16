@@ -14,7 +14,9 @@ public class ArcadeTopPanel : MonoBehaviour
     private Text jobText;
     private Text hpText;
     private Text mpText;
-
+    private Text atkText;
+    private Text defText;
+    private Text spText;
     private GameObject rightInfo;
     private GameObject personItems;
     private GameObject facilityItems;
@@ -39,6 +41,9 @@ public class ArcadeTopPanel : MonoBehaviour
         jobText = transform.Find("LeftInfo/AttrValue/Job").GetComponent<Text>();
         hpText = transform.Find("LeftInfo/AttrValue/Hp").GetComponent<Text>();
         mpText = transform.Find("LeftInfo/AttrValue/Mp").GetComponent<Text>();
+        atkText = transform.Find("LeftInfo/AttrValue/Atk").GetComponent<Text>();
+        defText = transform.Find("LeftInfo/AttrValue/Def").GetComponent<Text>();
+        spText = transform.Find("LeftInfo/AttrValue/Sp").GetComponent<Text>();
 
         bagBtn = transform.Find("RightInfo/FuncItems/BagBtn").GetComponent<Button>();
         rankBtn = transform.Find("RightInfo/FuncItems/RankBtn").GetComponent<Button>();
@@ -102,6 +107,9 @@ public class ArcadeTopPanel : MonoBehaviour
         jobText.text = PlayerData.GetString(PlayerData.Job, "武士");
         hpText.text = PlayerData.GetInt(PlayerData.Hp, 100).ToString();
         mpText.text = PlayerData.GetInt(PlayerData.Mp, 100).ToString();
+        atkText.text = PlayerData.GetInt(PlayerData.Atk, 10).ToString();
+        defText.text = PlayerData.GetInt(PlayerData.Def, 1).ToString();
+        spText.text = PlayerData.GetInt(PlayerData.Sp, 1).ToString();
     }
     private void TopPanelUpdate(CenterBtnEnums enums)
     {

@@ -68,6 +68,17 @@ public class EquipPanel : MonoBehaviour
                 goodsCountText.text = goodsItem.Price.ToString() + "金币";
                 goodsButton.onClick.AddListener(() =>
                 {
+                    if (PlayerData.GetInt(PlayerData.Coin, 100) < goodsItem.Price)
+                    {
+                        Tools.ShowTip("金币不足,购买失败");
+                    }
+                    else
+                    {
+                        GameData.Instance.UseItemByCount(1001, 1);
+                        PlayerData.SetInt(PlayerData.Coin, PlayerData.GetInt(PlayerData.Coin, 100) - goodsItem.Price);
+                        Tools.ShowTip("购买" + goodsItem.GoodsName + "成功,金币-" + goodsItem.Price);
+                        GameData.Instance.AddItemToKnapsack(goodsItem.GoodsID, 1);
+                    }
                     // if (goodsItem.GoodsID == 1004)
                     // {
                     //     Tools.ShowTip("使用成功,生命值已恢复满");
@@ -78,9 +89,6 @@ public class EquipPanel : MonoBehaviour
                     //     ShowBagPanel(true);
                     // }
                     // else
-                    {
-                        Tools.ShowTip("功能制作中");
-                    }
                 });
             });
         }

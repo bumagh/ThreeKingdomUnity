@@ -1,5 +1,6 @@
 
 using System;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -64,7 +65,15 @@ public class BagPanel : MonoBehaviour
                         }
                         else
                         {
-                            Tools.ShowTip("功能制作中");
+                            if (goodsItem.GoodsTypeId == (int)GoodsTypeEnums.Equipment)
+                            {
+                                Tools.ShowTip("装备成功!");
+                                GameData.Instance.UseItemByCount(goodsItem.GoodsID, 1);
+                                ShowBagPanel(true);
+                                GameData.Instance.LoadEquip(goodsItem.GoodsID);
+                            }
+                            else
+                                Tools.ShowTip("功能制作中");
                         }
                     });
                 }

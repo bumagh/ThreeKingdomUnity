@@ -23,7 +23,10 @@ public static class ConfigData
         {
             soldier.Initialize();
         }
-
+        foreach (var item in goods)
+        {
+            item.ParseStats();
+        }
         isLoad = true;
     }
 }
