@@ -69,8 +69,8 @@ public class BagPanel : MonoBehaviour
                             {
                                 Tools.ShowTip("装备成功!");
                                 GameData.Instance.UseItemByCount(goodsItem.GoodsID, 1);
-                                ShowBagPanel(true);
                                 GameData.Instance.LoadEquip(goodsItem.GoodsID);
+                                ShowBagPanel(true);
                             }
                             else
                                 Tools.ShowTip("功能制作中");

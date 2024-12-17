@@ -36,8 +36,22 @@ public class GameData : MonoSingleton<GameData>
             var array = item.Split('#');
             items.Add(int.Parse(array[0]), int.Parse(array[1]));
         }
-
-        PlayerData.SetInt(PlayerData.Atk, 10);
+        var equipStrs = PlayerData.GetString(PlayerData.Equips, "");
+        foreach (var item in equipStrs.Split('|'))
+        {
+            if (string.IsNullOrEmpty(item))
+                continue;
+            Debug.Log(item);
+            Goods equip = ConfigData.goods.Find(ele => ele.GoodsID == Int32.Parse(item));
+            if (equip == null)
+            {
+                Debug.LogError("Invalid Equip ID");
+                return;
+            }
+            // 获取装备类型
+            EquipTypeEnums equipType = (EquipTypeEnums)equip.GoodsTypeChild;
+            equips.Add((int)equipType, equip);
+        }
     }
 
     public string[] GetBattleSoldiers()
@@ -138,6 +152,15 @@ public class GameData : MonoSingleton<GameData>
         PlayerData.SetString(PlayerData.Items, string.Join('|', list));
     }
 
+    private void SaveEquips()
+    {
+        List<string> list = new List<string>();
+        foreach (var item in equips)
+        {
+            list.Add($"{item.Value.GoodsID}");
+        }
+        PlayerData.SetString(PlayerData.Equips, string.Join('|', list));
+    }
 
 
     private void LoadBattleSoldier()
@@ -180,13 +203,13 @@ public class GameData : MonoSingleton<GameData>
         if (equips.ContainsKey((int)equipType))
         {
             UnloadEquip(equipType);
-
         }
 
         // 装备上该物品
         equips[(int)equipType] = equip;
         ApplyEquipStats(equip);
         Debug.Log($"Equipped {equip.GoodsName} on {equipType}");
+        SaveEquips();
     }
 
     private void ApplyEquipStats(Goods equip)
@@ -230,6 +253,8 @@ public class GameData : MonoSingleton<GameData>
         {
             Debug.Log($"No item equipped on {equipType}");
         }
+        SaveEquips();
+
     }
 
     private void RemoveEquipStats(Goods equip)
@@ -262,6 +287,10 @@ public class GameData : MonoSingleton<GameData>
         if (items.ContainsKey(itemId))
         {
             items[itemId] = items[itemId] - count;
+            if (items[itemId] <= 0)
+            {
+                items.Remove(itemId);
+            }
         }
         UpdateItems();
     }

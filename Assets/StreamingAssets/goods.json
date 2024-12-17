@@ -75,7 +75,7 @@
     {
       "GoodsID": 1009,
       "GoodsName": "初级战靴",
-      "GoodsDescribed": "增加10移动速度",
+      "GoodsDescribed": "增加10速度",
       "GoodsTypeId": 6,
       "GoodsTypeChild": 3,
       "Price": 1,
@@ -102,7 +102,7 @@
     {
       "GoodsID": 1012,
       "GoodsName": "初级护腕",
-      "GoodsDescribed": "增加100最大mp",
+      "GoodsDescribed": "增加100最大精力",
       "GoodsTypeId": 6,
       "GoodsTypeChild": 5,
       "Price": 1,
@@ -111,7 +111,7 @@
     {
       "GoodsID": 1013,
       "GoodsName": "初级项链",
-      "GoodsDescribed": "增加100最大hp",
+      "GoodsDescribed": "增加100最大生命",
       "GoodsTypeId": 6,
       "GoodsTypeChild": 6,
       "Price": 1,

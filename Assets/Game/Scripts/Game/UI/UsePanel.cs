@@ -33,6 +33,7 @@ public class UsePanel : MonoBehaviour
     {
         if (show)
         {
+            transform.localScale = Vector3.one;
             ClearUI();
             var prefab = Resources.Load<GameObject>("Prefabs/Arcade/GoodsItem");
             foreach (var item in GameData.Instance.items)
@@ -71,7 +72,6 @@ public class UsePanel : MonoBehaviour
                     });
                 }
             }
-            transform.localScale = Vector3.one;
         }
         else
         {
