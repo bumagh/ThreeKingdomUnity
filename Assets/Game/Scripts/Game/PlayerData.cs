@@ -23,6 +23,7 @@ public static class PlayerData
     public const string Def = "Def";
     public const string Atk = "Atk";
     public const string Sp = "Sp";
+    public const string LocalUuid = "LocalUuid";
 
     public static string userId;
 

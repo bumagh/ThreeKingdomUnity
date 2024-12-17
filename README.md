@@ -52,5 +52,5 @@ ThreeKingdomUnity
 
 # bug
 - [x] confirmPanel弹出多次
-- [] 战斗时使用物品其他角色会满血
+- [x] 战斗时使用物品其他角色会满血
 - [x] 攻击时如果没有点敌方 再点敌方会无效

@@ -86,6 +86,7 @@ public class GameController : MonoBehaviour
                 playerController.isLeft = false;
                 players.Add(playerController.player);
                 playerCtrls.Add(playerController);
+                PlayerData.SetString(PlayerData.LocalUuid, playerController.player.uuid);
             }
             else
             {

@@ -65,7 +65,7 @@ public class UsePanel : MonoBehaviour
                         {
                             Tools.ShowTip("功能制作中");
                         }
-                        EventManager.DispatchEvent(EventName.UpdateHpUI);
+                        EventManager.DispatchEvent<string>(EventName.UpdateHpUI, PlayerData.GetString(PlayerData.LocalUuid, null));
                         EventManager.DispatchEvent(EventName.SetNextRoundPlayerId);
 
                     });

@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         hpTmp = transform.Find("HpTextTmp").GetComponent<TextMeshPro>();
         atkTmp = transform.Find("AtkTextTmp").GetComponent<TextMeshPro>();
         speedTmp = transform.Find("SpeedTextTmp").GetComponent<TextMeshPro>();
-        EventManager.AddEvent(EventName.UpdateHpUI, this.UpdateHpUI);
+        EventManager.AddEvent<string>(EventName.UpdateHpUI, this.UpdateHpUI);
 
     }
     void Start()
@@ -41,8 +41,9 @@ public class PlayerController : MonoBehaviour
         // 记录原始位置
         originalPosition = transform.position;
     }
-    public void UpdateHpUI()
+    public void UpdateHpUI(string uuid)
     {
+        if (uuid != player.uuid) return;
         if (player.hp > 0)
         {
             player.hp = PlayerData.GetInt(PlayerData.Hp, 1);
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
         player.sodierName = soldier.SodierName;
         player.soldierId = soldier.SoldierId;
         player.uuid = Guid.NewGuid().ToString();
+       
     }
     public void TakeDamage(int damage)
     {
@@ -160,7 +162,7 @@ public class PlayerController : MonoBehaviour
 
     void OnDestroy()
     {
-        EventManager.RemoveEvent(EventName.UpdateHpUI, this.UpdateHpUI);
+        EventManager.RemoveEvent<string>(EventName.UpdateHpUI, this.UpdateHpUI);
 
     }
 }
