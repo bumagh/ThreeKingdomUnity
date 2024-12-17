@@ -82,7 +82,7 @@ public class GameController : MonoBehaviour
             var playerController = newPlayerGo.GetComponent<PlayerController>();
             if (i == 0)
             {
-                playerController.Init("主将", PlayerData.GetInt(PlayerData.Hp, 100), PlayerData.GetInt(PlayerData.Atk, 1), 40, ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"));
+                playerController.Init("主将", PlayerData.GetInt(PlayerData.Hp, 100), PlayerData.GetInt(PlayerData.Atk, 1), PlayerData.GetInt(PlayerData.Sp, 20), ConfigData.soldiers.Find(ele => ele.SoldierId == "1000"), PlayerData.GetInt(PlayerData.Def, 10));
                 playerController.isLeft = false;
                 players.Add(playerController.player);
                 playerCtrls.Add(playerController);

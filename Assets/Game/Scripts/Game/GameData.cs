@@ -52,6 +52,19 @@ public class GameData : MonoSingleton<GameData>
             EquipTypeEnums equipType = (EquipTypeEnums)equip.GoodsTypeChild;
             equips.Add((int)equipType, equip);
         }
+        if (PlayerData.GetInt(PlayerData.Atk, 1) == 1)
+        {
+            //第一次初始化
+            PlayerData.SetInt(PlayerData.Atk, 10);
+            PlayerData.SetInt(PlayerData.Hp, 100);
+            PlayerData.SetInt(PlayerData.Mp, 100);
+            PlayerData.SetInt(PlayerData.Def, 10);
+            PlayerData.SetInt(PlayerData.Sp, 20);
+            PlayerData.SetString(PlayerData.Job, "武士");
+            PlayerData.SetInt(PlayerData.Coin, 100);
+            PlayerData.SetInt(PlayerData.Exp, 0);
+            PlayerData.SetInt(PlayerData.Level, 1);
+        }
     }
 
     public string[] GetBattleSoldiers()

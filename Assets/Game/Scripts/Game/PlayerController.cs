@@ -1,5 +1,6 @@
 
 using System;
+using System.Linq.Expressions;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private TextMeshPro atkTmp;
     [HideInInspector]
     private TextMeshPro speedTmp;
+    [HideInInspector]
+    private TextMeshPro defTmp;
     public Player player = new Player();
     public bool isSelectTarget = false;
     public bool isLeft = true;
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
         hpTmp = transform.Find("HpTextTmp").GetComponent<TextMeshPro>();
         atkTmp = transform.Find("AtkTextTmp").GetComponent<TextMeshPro>();
         speedTmp = transform.Find("SpeedTextTmp").GetComponent<TextMeshPro>();
+        defTmp = transform.Find("DefTextTmp").GetComponent<TextMeshPro>();
         EventManager.AddEvent<string>(EventName.UpdateHpUI, this.UpdateHpUI);
 
     }
@@ -53,24 +57,27 @@ public class PlayerController : MonoBehaviour
             hpTmp.text = "已阵亡";
 
     }
-    public void Init(string name, int hp, int atk, int speed, Soldier soldier)
+    public void Init(string name, int hp, int atk, int speed, Soldier soldier, int def = 10)
     {
         nameTmp = transform.Find("NameTextTmp").GetComponent<TextMeshPro>();
         hpTmp = transform.Find("HpTextTmp").GetComponent<TextMeshPro>();
         atkTmp = transform.Find("AtkTextTmp").GetComponent<TextMeshPro>();
         speedTmp = transform.Find("SpeedTextTmp").GetComponent<TextMeshPro>();
+        defTmp = transform.Find("DefTextTmp").GetComponent<TextMeshPro>();
         nameTmp.text = name;
         hpTmp.text = "hp:" + hp.ToString();
         atkTmp.text = "攻击:" + atk.ToString();
         speedTmp.text = "速度:" + speed.ToString();
+        defTmp.text = "防御:" + def.ToString(); ;
         player.hp = hp;
         player.atk = atk;
         player.mp = hp;
         player.sp = speed;
+        player.def = def;
         player.sodierName = soldier.SodierName;
         player.soldierId = soldier.SoldierId;
         player.uuid = Guid.NewGuid().ToString();
-       
+
     }
     public void TakeDamage(int damage)
     {
@@ -123,7 +130,7 @@ public class PlayerController : MonoBehaviour
     {
         // 在这里添加攻击逻辑，例如减少目标的生命值
         //TODO:增加防御
-        int realDmg = player.atk;
+        int realDmg = Math.Max(1, player.atk - target.GetComponent<PlayerController>().player.def);
         target.GetComponent<PlayerController>()?.TakeDamage(realDmg);
     }
     void MoveToTarget()
