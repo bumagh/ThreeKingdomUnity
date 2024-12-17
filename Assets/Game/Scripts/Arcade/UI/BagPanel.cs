@@ -51,7 +51,7 @@ public class BagPanel : MonoBehaviour
                     var goodsButton = go.transform.Find("Button").GetComponent<Button>();
                     goodsNameText.text = goodsItem.GoodsName;
                     goodsDescText.text = goodsItem.GoodsDescribed;
-                    goodsCountText.text = item.Value.ToString();
+                    goodsCountText.text = item.Value.ToString()+"个";
                     goodsButton.onClick.AddListener(() =>
                     {
                         if (goodsItem.GoodsID == 1004)

@@ -136,7 +136,7 @@ public class GameController : MonoBehaviour
         {
             isGaming = false;
 
-            Tools.ShowConfirm("游戏失败", () =>
+            Tools.ShowConfirm("对战失败", () =>
             {
                 SceneManager.LoadScene("Arcade");
             }, () =>
@@ -211,8 +211,8 @@ public class GameController : MonoBehaviour
                 EventManager.DispatchEvent(EventName.ShowBattleMenuPanel, false);
                 playerCtrls.Find(ele => ele.player.uuid == curRoundPlayerId).target = hit.collider.gameObject;
                 // 在此处添加点击后的处理逻辑
+                SetLocalBattleState(false);
             }
-            SetLocalBattleState(false);
         }
     }
 
