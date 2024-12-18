@@ -28,6 +28,7 @@ public class ArcadeTopPanel : MonoBehaviour
     private Button exitBtn;
     private Button bankBtn;
     private Button equipBtn;
+    private Button skillBtn;
     private Button soldierBtn;
 
 
@@ -53,6 +54,7 @@ public class ArcadeTopPanel : MonoBehaviour
         bankBtn = transform.Find("RightInfo/FacilityItems/BankBtn").GetComponent<Button>();
         equipBtn = transform.Find("RightInfo/FacilityItems/EquipBtn").GetComponent<Button>();
         soldierBtn = transform.Find("RightInfo/FacilityItems/SoldierBtn").GetComponent<Button>();
+        skillBtn = transform.Find("RightInfo/FacilityItems/SkillBtn").GetComponent<Button>();
 
         bagBtn.onClick.AddListener(() =>
         {
@@ -87,7 +89,11 @@ public class ArcadeTopPanel : MonoBehaviour
         {
             Tools.ShowTip("功能开发中");
         });
-
+        skillBtn.onClick.AddListener(() =>
+                    {
+                        // EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
+                        // EventManager.DispatchEvent<bool>(EventName.ShowEquipPanel, true);
+                    });
         rightInfo = transform.Find("RightInfo").gameObject;
         personItems = transform.Find("RightInfo/PersonItems").gameObject;
         facilityItems = transform.Find("RightInfo/FacilityItems").gameObject;

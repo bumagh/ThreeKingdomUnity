@@ -72,7 +72,7 @@
         },
         {
           "SkillId": 10007,
-          "SkillName": "苞苴公行",
+          "SkillName": "财诱敌手",
           "Description": "对敌方单体使用,用钱财贿赂敌方，使敌方受贿3个回合，若敌方主将战败，副将将变成己方单位 ",
           "AtkCoe": 1,
           "MpCost": 10,
