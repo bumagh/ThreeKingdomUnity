@@ -91,8 +91,8 @@ public class ArcadeTopPanel : MonoBehaviour
         });
         skillBtn.onClick.AddListener(() =>
                     {
-                        // EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
-                        // EventManager.DispatchEvent<bool>(EventName.ShowEquipPanel, true);
+                        EventManager.DispatchEvent<bool>(EventName.ShowHomePanel, false);
+                        EventManager.DispatchEvent<bool>(EventName.ShowSkillPanel, true);
                     });
         rightInfo = transform.Find("RightInfo").gameObject;
         personItems = transform.Find("RightInfo/PersonItems").gameObject;

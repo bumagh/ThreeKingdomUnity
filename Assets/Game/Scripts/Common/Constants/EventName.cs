@@ -20,6 +20,7 @@ public class EventName
     public const int UpdateHpUI = 100010;
     public const int ShowBankPanel = 100011;
     public const int ShowEquipPanel = 100012;
+    public const int ShowSkillPanel = 100013;
 
 
 }
