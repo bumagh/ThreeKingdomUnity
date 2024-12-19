@@ -52,6 +52,11 @@ public class GameData : MonoSingleton<GameData>
             EquipTypeEnums equipType = (EquipTypeEnums)equip.GoodsTypeChild;
             equips.Add((int)equipType, equip);
         }
+
+    }
+
+    public void InitPlayerData()
+    {
         if (PlayerData.GetInt(PlayerData.Atk, 1) == 1)
         {
             //第一次初始化
@@ -66,7 +71,6 @@ public class GameData : MonoSingleton<GameData>
             PlayerData.SetInt(PlayerData.Level, 1);
         }
     }
-
     public string[] GetBattleSoldiers()
     {
         return battleSoldiers;

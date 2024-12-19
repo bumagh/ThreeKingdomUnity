@@ -13,5 +13,6 @@ public class LoginController : MonoBehaviour
         {
             SceneManager.LoadScene("Arcade");
         });
+        GameData.Instance.InitPlayerData();
     }
 }
